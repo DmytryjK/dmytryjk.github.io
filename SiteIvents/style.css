@@ -1,0 +1,487 @@
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: white;
+}
+ul {
+	list-style-type: none;
+}
+/* ------------------Header ------------------*/
+
+/* LOGO */
+
+header {
+	background: url('img/header/bgHeader.png') no-repeat;
+	//background-size: cover;
+	background-position: center;
+	height: 769px;
+}
+
+.wrapper {
+	padding-top: 50px;
+	width: 1030px;
+	margin: 0 auto;
+	padding-bottom: 0;
+}
+
+.header {
+	position: absolute;
+	width: 220px;
+}
+
+.greenLeaf {
+	background: url('img/header/leaf.svg') no-repeat;
+	height: 50px;
+	width: 50px;
+	float: left;
+	margin-top: 7px;
+}
+
+.text {
+	background: url('img/header/logo2part.svg') no-repeat;
+	height: 36px;
+	margin-left: 50px;
+}
+
+.logo {
+	color: #82b541;
+	margin: 0px;
+	font-family: 'Roboto Slab', serif;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+/* Navigation */
+nav {
+	float: right;
+}
+
+.navigation li {
+	display: inline-block;
+	font-family: 'Roboto Slab', serif;
+	padding-right: 40px;
+	text-transform: uppercase;
+	font-size: 15px;
+	list-style: none;
+}
+.navigation li:last-child {
+	padding-right: 0px;
+}
+
+.navigation a {
+	text-decoration: none;
+	color: white;
+}
+
+.navigation a:after {
+	content: '';
+	display: block;
+	border-bottom: 2px solid #82b541;
+	width: 0;
+	transition: 0.5s all ease;
+}
+
+.navigation a:hover:after {
+	width: 100%;	
+}
+
+/* Timer */ 
+div .timer {
+	margin: 0 auto;
+	margin-top: 175px;
+}
+
+.timer {
+	background: url('img/header/borderTimer.svg') no-repeat;
+	width: 974px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+
+}
+
+.timer div {
+	display: inline-block;
+	padding-right: 30px;
+	color: white;
+	
+}
+
+.timer h1 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 135px;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+
+.timer h2 {
+	margin-top: -10px;
+	width: 150px;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 25px;
+	text-transform: uppercase;
+}
+/*
+.timer h1 {
+	position: relative;
+	font-size: 135px;
+	text-align: center;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+.timer h2 {
+	margin-top: -100px;
+	word-spacing: 110px;
+	text-transform: uppercase;
+	font-size: 25px;
+	text-align: center;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+*/
+
+/* SVG IMAGES BOTTOM */
+
+.svgImage {
+	margin-top: 160px;
+	width: 890px;
+	transform: rotate(-5deg);
+	-webkit-clip-path: polygon(-100% -100%, 100% 0, 100% 88%, 0 88%); 
+	clip-path: polygon(-100% -100%, 100% 0, 100% 88%, 0 88%);
+}
+
+.svgImages1 {
+	background: url(img/header/icon1.svg) no-repeat;
+	float: left;
+	width: 191px;
+	height: 207px;
+}
+
+.svgImages2 {
+	background: url(img/header/icon2.svg) no-repeat;
+	float: left;
+	width: 172px;
+	height: 191px;
+}
+
+.svgImages3 {
+	background: url(img/header/icon3.svg) no-repeat;
+	float: left;	
+	width: 171px;
+	height: 181px;
+}
+
+.svgImages4 {
+	background: url(img/header/icon4.svg) no-repeat;
+	float: left;
+	width: 171px;
+	height: 192px;
+}
+
+.svgImages5 {
+	background: url(img/header/icon5.svg) no-repeat;
+	float: left;
+	width: 171px;
+	height: 184px;
+}
+
+.clearfix {
+	content: ('');
+	display: table;
+	clear: both;
+}
+
+.svgImage div {
+	margin: -30px;
+}
+
+/* -------------CONTEINER WITH SIGN FORM------------- */
+
+.wellcome {
+	width: 525px;
+	float: left;
+}
+
+h1 {
+	font-family: 'Roboto', sans-serif;
+	font-style: bold;
+	font-size: 50px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	color: #6c6c6c;
+}
+
+/* Sign Form */
+
+.formSignUp {
+	position: relative;
+	float: right;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	margin-left: 70px;
+	margin-top: -280px;
+	background-color: white;
+	width: 430px;
+	border-radius: 10px;
+}
+
+.formSignUp input {
+	width: 375px;
+	height: 50px;
+	margin: 0 auto;
+	display: block;
+	outline: none;
+	border-radius: 10px;
+	border: 1px solid #82b541;
+	font-size: 20px;
+	color: #6c6c6c;
+}
+
+input::placeholder {
+	color: #bebebe;
+}
+
+.formSignUp button {
+	width: 375px;
+	border-radius: 10px;
+	display: block;
+	margin: 0 auto;
+	background-color: #90d23d;
+	border: none;
+	outline: none;
+}
+
+button:hover {
+	box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+	letter-spacing: 1px;
+	transition: all 0.4s ease 0s;
+}
+
+button h2 {
+	margin: 10px !important;
+	color: white;
+}
+
+form h2 {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-size: 30px;
+	font-style: bold;
+	margin: 30px;
+}
+
+form p {
+	text-align: center;
+	font-size: 15px;
+}
+
+/* FlexBox Images Content */
+
+.container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	margin-top: 100px;
+	margin-bottom: 0;
+}
+
+.container1, .container2, .container3 {
+	width: 295px;
+	text-align: center;
+	padding: 40px;
+}
+
+.ContainerImg1 {
+	background: url('img/containerImg/ContainerImg1.svg') no-repeat;
+	margin: 0 auto;
+	width: 210px;
+	height: 195px;
+}
+.ContainerImg2 {
+	background: url('img/containerImg/ContainerImg2.svg') no-repeat;
+	margin: 0 auto;
+	width: 210px;
+	height: 195px;
+}
+.ContainerImg3 {
+	background: url('img/containerImg/ContainerImg3.svg') no-repeat;
+	margin: 0 auto;
+	width: 210px;
+	height: 195px;
+}
+
+.container h1 {
+	font-size: 35px;
+	margin-top: 20px;
+}
+
+/* TIME TABLE ACTIONS */
+
+.timeTable {
+	text-align: center; 
+	margin-top: -25px;
+	background-color: lightgray;
+	border-radius: 10px;
+}
+
+.timeTable h1 {
+	color: white;
+	font-size: 30px;
+}
+
+.tr1 {
+	background-color: #a3cc3f;
+	height: 50px;
+	width: 100%;
+}
+
+.tr2, .tr4 {
+	background-color: #373737;
+	height: 50px;
+	width: 100%;
+}
+
+.tr3, .tr5 {
+	background-color: #4b4d4f;
+	height: 50px;
+	width: 100%;
+}
+
+/*
+table:nth-child(1) {
+	background-color: #82b541;
+	height: 75px;
+}
+.timeTable li:nth-child(2n) {
+	background-color: black;
+}
+*/
+.textAfterTable {
+	text-align: center;
+	margin: 0 auto;
+	width: 825px;
+	margin-top: 40px;
+	margin-bottom: 200px
+}
+
+
+/* ------------------- BLOCK REWARDS ----------------*/
+.BG_blockRewards {
+	background: url(img/bgReward.png) no-repeat;
+	background-position: center;
+	height: 700px;
+}
+
+.logoReward {
+	position: absolute;
+	margin-top: -150px;
+	background: url(img/logoReward.png) no-repeat;
+	height: 350px;
+	width: 350px;
+}
+/* Text Rewards */
+.textReward {
+	margin-top: 125px;
+	width: 665px;
+	text-align: right;
+	float: right;
+}
+.textReward h1 {
+	color: white;
+}
+.textReward p {
+	color: #e7e7e8;
+}
+
+/*Button */
+.button2 {
+	width: 200px;
+	border-radius: 15px;
+	display: block;
+	margin: 0 auto;
+	margin-right: 0;
+	background-color: #90d23d;
+	border: none;
+	outline: none;
+}
+.button2 p {
+	color: white;
+}
+
+/* Block Speakers */
+
+.textSpeakers p, .textSpeakers h1  {
+	width: 570px;
+}
+
+.SpeakersFlex {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.blockSpeakers {
+	position: relative;
+	background-color: #90d23d;
+	width: 300px;
+	height: 300px;
+	border-radius: 10px;
+	margin-bottom: 40px;
+	overflow: hidden;
+}
+.SpeakersFlex div img {
+	width: auto;
+	height: 100%;
+}
+.SpeakersFlex div:nth-child(5) {
+	background: url('img/speakerFingers.svg');
+	width: 232px;
+	height: 232px;
+}
+
+.textBoxSpeakers {
+	position: absolute;
+	display: inline-block;
+	top: 35px;
+	left: 35px;
+	width: 200px;
+}
+.SpeakersFlex div h1 {
+	font-size: 45px;
+	color: white;
+	border-bottom: 5px solid white;
+}
+
+.SpeakersFlex p {
+	color: white;
+}
+
+.icons {
+	margin-top: 60px;
+	width: 150px;
+	overflow: hidden;
+}
+
+.icons i {
+	color: white;
+	padding: 5px;
+}
+
+.fa-facebook-square:hover {
+	color: #3c5b9b;
+	transition: 1s;
+
+}
