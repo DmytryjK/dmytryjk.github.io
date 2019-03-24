@@ -665,11 +665,13 @@ footer p {
 
 @media screen and (max-width: 1366px) {
 	.wrapper {
-		width: 80%;
+		width: 90%;
+		background-size: cover;
 	}
 
 	.wrapperBackGround {
 		width: 100%;
+		background-size: cover;
 	}
 
 	.navigation li {
