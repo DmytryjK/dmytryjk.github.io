@@ -727,7 +727,13 @@ footer p {
 		float: none;
 		margin: 0 auto;
 	}
+	
+	/*---------------------*/
+	
 
+
+
+	/*---------------------*/
 
 	.textAfterTable {
 		width: 80%;
@@ -830,7 +836,6 @@ footer p {
 
 	.wrapperBackGround {
 		width: 100%;
-		background-size: cover;
 	}
 	
 	/* ------------------------ */
@@ -843,15 +848,13 @@ footer p {
 	/* ------------------------ */
 
 	.svgImage {
-		float: none;
-		-webkit-clip-path: none; 
-		clip-path: none;
-		margin-top: 280px;
+		margin-top: 375px;
+		width: 70%;
 	}
 
 	.svgImages1, .svgImages2, .svgImages3, .svgImages4, .svgImages5 {
-		width: 150px;
-		height: 100px;
+		width: 120px;
+		height: 70px;
 	}
 
 	/* ------------------------ */
@@ -897,6 +900,15 @@ footer p {
 		float: none;
 		margin: 0 auto;
 	}
+
+	/*---------------------*/
+
+	
+	.container {
+		width: 500px;
+	}
+
+	/*---------------------*/
 
 
 	.textAfterTable {
@@ -969,10 +981,27 @@ footer p {
 		color: white;
 	}
 	
+	/*----------------------*/
+
+
+	.TextEvents {
+		width: 95%;
+		margin-bottom: 100px;
+	}
+
 
 	/*----------------------*/
 	.EventsGalery {
 		width: 90%;
+	}
+
+	.EventsGalery img {
+		object-fit: cover;
+		flex-grow: 1;
+		max-width: 450px;
+		margin: 5px;
+		height: 300px;
+		box-shadow: 0 5px 10px rgba(0,0,0, .7);
 	}
 
 	.EventsGalery button {
