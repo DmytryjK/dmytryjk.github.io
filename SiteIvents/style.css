@@ -665,7 +665,7 @@ footer p {
 
 @media screen and (max-width: 1366px) {
 	.wrapper {
-		width: 90%;
+		width: 85%;
 		background-size: cover;
 	}
 
@@ -675,7 +675,6 @@ footer p {
 	}
 
 	.navigation li {
-
 		padding-right: 20px;
 	}
 
@@ -718,7 +717,7 @@ footer p {
 		clear: none;
 	}
 	.wellcome {
-		width: 70%;
+		width: 80%;
 		margin: 0 auto;
 		float: none;
 	}
@@ -731,17 +730,84 @@ footer p {
 
 
 	.textAfterTable {
-		width: 90%;
+		width: 80%;
 		margin-top: 40px;
 		margin-bottom: 200px
 	}
 
 	/*---------------------*/
 
+	.logoReward {
+		margin-top: -50px;
+		background-size: cover;
+		height: 175px;
+		width: 175px;
+	}
+	/* Text Rewards */
+	.textReward {
+		margin-top: 75px;
+		width: 90%;
+		float: none;
+	}
+
+	/*----------------------*/
+	
+	.textSpeakers {
+		margin: 0 auto;
+		width: 50%;
+	}
+
+	.textSpeakers p, .textSpeakers h1  {
+		width: 100%;
+		text-align: center;
+	}
+
+	.SpeakersFlex {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+
+	.blockSpeakers {
+		position: relative;
+		background-color: #90d23d;
+		width: 300px;
+		height: 300px;
+		border-radius: 10px;
+		margin-bottom: 40px;
+		overflow: hidden;
+		margin: 10px;
+	}
+	.SpeakersFlex div img {
+		width: auto;
+		height: 100%;
+	}
+	.SpeakersFlex div:nth-child(5) {
+		background: url('img/speakerFingers.svg');
+		width: 300px;
+		height: 300px;
+	}
+
+	.textBoxSpeakers {
+		position: absolute;
+		display: inline-block;
+		top: 35px;
+		left: 35px;
+		width: 200px;
+	}
+	.SpeakersFlex div h1 {
+		font-size: 45px;
+		color: white;
+		border-bottom: 5px solid white;
+	}
+
+	.SpeakersFlex p {
+		color: white;
+	}
 	
 
 	/*----------------------*/
-
 	.EventsGalery {
 		width: 90%;
 	}
@@ -757,6 +823,162 @@ footer p {
 
 @media screen and (max-width: 900px) {
 	
+	.wrapper {
+		width: 85%;
+		background-size: cover;
+	}
+
+	.wrapperBackGround {
+		width: 100%;
+		background-size: cover;
+	}
+	
+	/* ------------------------ */
+
 	.navigation li {
-	display: block;
+		display: block;
+		padding-right: 50px;
+	}
+	
+	/* ------------------------ */
+
+	.svgImage {
+		float: none;
+		-webkit-clip-path: none; 
+		clip-path: none;
+		margin-top: 280px;
+	}
+
+	.svgImages1, .svgImages2, .svgImages3, .svgImages4, .svgImages5 {
+		width: 150px;
+		height: 100px;
+	}
+
+	/* ------------------------ */
+
+	.timer {
+		background: url('img/header/borderTimer.svg') no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 400px;
+		height: auto;	
+	}
+
+	.timer div:not(:last-child) {
+		padding-right: 5px;	
+	}
+
+	.timer h1 {
+		font-size: 55px;
+	}
+
+	.timer h2 {
+		padding-top: 5px;
+		width: 55px;
+		font-size: 7px;
+	}
+
+	/* ------------------------ */
+
+
+	.clearfix {
+		content: none;
+		display: block;
+		clear: none;
+	}
+	.wellcome {
+		width: 80%;
+		margin: 0 auto;
+		float: none;
+	}
+
+	.formSignUp {
+		padding: 10px;
+		float: none;
+		margin: 0 auto;
+	}
+
+
+	.textAfterTable {
+		width: 80%;
+		margin-top: 40px;
+		margin-bottom: 200px
+	}
+
+	/*---------------------*/
+
+	.logoReward {
+		margin-top: -50px;
+		background-size: cover;
+		height: 175px;
+		width: 175px;
+	}
+	/* Text Rewards */
+	.textReward {
+		margin-top: 75px;
+		width: 90%;
+		float: none;
+	}
+
+	/*----------------------*/
+	
+	.textSpeakers {
+		margin: 0 auto;
+		width: 50%;
+	}
+
+	.textSpeakers p, .textSpeakers h1  {
+		width: 100%;
+		text-align: center;
+	}
+
+
+	.blockSpeakers {
+		position: relative;
+		background-color: #90d23d;
+		width: 300px;
+		height: 300px;
+		border-radius: 10px;
+		margin-bottom: 40px;
+		overflow: hidden;
+	}
+	.SpeakersFlex div img {
+		width: auto;
+		height: 100%;
+	}
+	.SpeakersFlex div:nth-child(5) {
+		background: url('img/speakerFingers.svg');
+		width: 300px;
+		height: 300px;
+	}
+
+	.textBoxSpeakers {
+		position: absolute;
+		display: inline-block;
+		top: 35px;
+		left: 35px;
+		width: 200px;
+	}
+	.SpeakersFlex div h1 {
+		font-size: 45px;
+		color: white;
+		border-bottom: 5px solid white;
+	}
+
+	.SpeakersFlex p {
+		color: white;
+	}
+	
+
+	/*----------------------*/
+	.EventsGalery {
+		width: 90%;
+	}
+
+	.EventsGalery button {
+		display: block;
+		margin-top: 200px;
+		background-color: #373737;
+		
+	}
 }
