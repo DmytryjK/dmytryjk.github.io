@@ -17,6 +17,11 @@ input {
 a {
 	text-decoration: none;
 }
+
+.wrapperBackGround {
+	width: 1366px;
+	margin: 0 auto;
+}
 /* ------------------Header ------------------*/
 
 /* LOGO */
@@ -112,17 +117,15 @@ div .timer {
 	height: 200px;
 	display: flex;
 	justify-content: center;
-
 }
 
-.timer div {
+.timer div:not(:last-child) {
 	display: inline-block;
-	padding-right: 30px;
-	color: white;
-	
+	padding-right: 30px;	
 }
 
 .timer h1 {
+	color: white;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	font-size: 135px;
@@ -132,6 +135,7 @@ div .timer {
 }
 
 .timer h2 {
+	color: white;
 	margin-top: -10px;
 	width: 150px;
 	text-align: center;
@@ -140,26 +144,6 @@ div .timer {
 	font-size: 25px;
 	text-transform: uppercase;
 }
-/*
-.timer h1 {
-	position: relative;
-	font-size: 135px;
-	text-align: center;
-	color: white;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 100;
-}
-.timer h2 {
-	margin-top: -100px;
-	word-spacing: 110px;
-	text-transform: uppercase;
-	font-size: 25px;
-	text-align: center;
-	color: white;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
-}
-*/
 
 /* SVG IMAGES BOTTOM */
 
@@ -383,6 +367,7 @@ table:nth-child(1) {
 	background-color: black;
 }
 */
+
 .textAfterTable {
 	text-align: center;
 	margin: 0 auto;
@@ -469,8 +454,8 @@ table:nth-child(1) {
 }
 .SpeakersFlex div:nth-child(5) {
 	background: url('img/speakerFingers.svg');
-	width: 232px;
-	height: 232px;
+	width: 300px;
+	height: 300px;
 }
 
 .textBoxSpeakers {
@@ -501,7 +486,7 @@ table:nth-child(1) {
 	padding: 5px;
 }
 
-.fab:hover {
+.fab {
 	transition: 0.5s;
 }
 
@@ -510,7 +495,7 @@ table:nth-child(1) {
 }
 
 .fa-google-plus-square:hover {
-	color: #ff506d;
+	color: #ea4335;
 }
 .fa-twitter-square:hover {
 	color: #00b6f1;
@@ -577,5 +562,199 @@ table:nth-child(1) {
 
 /* Past Events Block */ 
 .TextEvents {
-	width: ;
+	width: 635px;
+	margin-bottom: 100px;
+}
+
+.EventsGalery {
+	width: 1170px;
+	margin: 0 auto;
+	display: flex;
+	align-content: flex-start;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.EventsGalery img {
+	object-fit: cover;
+	flex-grow: 1;
+	max-width: 575px;
+	margin: 5px;
+	height: 380px;
+	box-shadow: 0 5px 10px rgba(0,0,0, .7);
+}
+
+.EventsGalery button {
+	margin: 0 auto;
+	margin-top: 50px;
+	background-color: #373737;
+	margin-bottom: 100px;
+}
+
+/* ------------ OUR COORDINATES BLOCK ---------------- */
+
+.ourCoordinates {
+	background: url('img/coordinates/Map.png') no-repeat;
+	height: 550px;
+	background-position: center;
+}
+
+
+/* ---------------- FOOTER --------------- */
+
+footer {
+	position: relative;
+	background-color: #90d23d;
+	height: 220px;
+	margin-top: 0;
+	overflow: auto;
+}
+
+.footerText .icons, .footerText {
+	width: 375px;
+	margin: 0 auto;
+}
+
+.footerText .icons {
+	margin-top: 60px;
+}
+
+footer p {
+	text-align: center;
+	padding: 0;
+	margin-top: 35px;
+	color: white;
+}
+
+.footerText .icons {
+	width: 248px;
+}
+
+.fa-instagram:hover {
+	color: #c13584;
+}		
+
+.fa-linkedin:hover {
+	color: #2797cf;
+}
+
+.fa-tumblr-square:hover {
+	color: #314358;
+}
+
+.arrowUp {
+	float: right;
+	margin-top: -100px;
+	margin-right: 10px;
+	transition: 1s;
+	
+}
+
+@keyframes bouncing{
+  0%  { margin-top: -100px; }
+  100% { margin-top: -90px; }
+}
+
+.arrowUp:hover {
+	cursor: pointer;
+	animation: bouncing 0.5s cubic-bezier(0.1,0.25,0.1,1) 0s infinite alternate both; 
+}
+
+
+
+
+@media screen and (max-width: 1366px) {
+	.wrapper {
+		width: 80%;
+	}
+
+	.wrapperBackGround {
+		width: 100%;
+	}
+
+	.navigation li {
+
+		padding-right: 20px;
+	}
+
+	.svgImage {
+		float: none;
+		-webkit-clip-path: none; 
+		clip-path: none;
+		margin-top: 280px;
+	}
+
+	.svgImages1, .svgImages2, .svgImages3, .svgImages4, .svgImages5 {
+		width: 150px;
+		height: 100px;
+	}
+
+
+
+	.timer {
+		background: url('img/header/borderTimer.svg') no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 750px;
+		height: auto;
+	}
+	.timer h1 {
+		font-size: 85px;
+	}
+
+	.timer h2 {
+		width: 85px;
+		font-size: 20px;
+	}
+
+
+
+
+	.clearfix {
+		content: none;
+		display: block;
+		clear: none;
+	}
+	.wellcome {
+		width: 70%;
+		margin: 0 auto;
+		float: none;
+	}
+
+	.formSignUp {
+		padding: 10px;
+		float: none;
+		margin: 0 auto;
+	}
+
+
+	.textAfterTable {
+		width: 90%;
+		margin-top: 40px;
+		margin-bottom: 200px
+	}
+
+	/*---------------------*/
+
+	
+
+	/*----------------------*/
+
+	.EventsGalery {
+		width: 90%;
+	}
+
+	.EventsGalery button {
+		display: block;
+		margin-top: 200px;
+		background-color: #373737;
+		
+	}
+}
+
+
+@media screen and (max-width: 900px) {
+	
+	.navigation li {
+	display: block;
 }
