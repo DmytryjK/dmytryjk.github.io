@@ -7,6 +7,16 @@ body {
 ul {
 	list-style-type: none;
 }
+button {
+	cursor: pointer;
+}
+input {
+	padding-left: 10px;
+}
+
+a {
+	text-decoration: none;
+}
 /* ------------------Header ------------------*/
 
 /* LOGO */
@@ -36,6 +46,7 @@ header {
 	width: 50px;
 	float: left;
 	margin-top: 7px;
+	transition: 0.5s;
 }
 
 .text {
@@ -52,6 +63,9 @@ header {
 	text-transform: uppercase;
 }
 
+.header a .greenLeaf:hover {
+	transform: rotateZ(-180deg);
+}
 /* Navigation */
 nav {
 	float: right;
@@ -380,7 +394,7 @@ table:nth-child(1) {
 
 /* ------------------- BLOCK REWARDS ----------------*/
 .BG_blockRewards {
-	background: url(img/bgReward.png) no-repeat;
+	background: url('img/bgReward.png') no-repeat;
 	background-position: center;
 	height: 700px;
 }
@@ -421,6 +435,12 @@ table:nth-child(1) {
 	color: white;
 }
 
+.button2:hover {
+	box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+	letter-spacing: 1px;
+	transition: all 0.4s ease 0s;
+}
+
 /* Block Speakers */
 
 .textSpeakers p, .textSpeakers h1  {
@@ -431,6 +451,7 @@ table:nth-child(1) {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	margin-bottom: 150px;
 }
 
 .blockSpeakers {
@@ -480,8 +501,81 @@ table:nth-child(1) {
 	padding: 5px;
 }
 
+.fab:hover {
+	transition: 0.5s;
+}
+
 .fa-facebook-square:hover {
 	color: #3c5b9b;
-	transition: 1s;
+}
 
+.fa-google-plus-square:hover {
+	color: #ff506d;
+}
+.fa-twitter-square:hover {
+	color: #00b6f1;
+}
+
+
+/* --------------- BLOCK SPONSORS ---------------- */
+
+.sponsors {
+	background: url('img/bgReward.png') no-repeat;
+	background-position: center;
+	height: 700px;
+	overflow: auto;
+}
+
+.sponsorsContent {
+	text-align: center;
+	width: 635px;
+	margin: 0 auto;
+	margin-top: 150px;
+}
+
+.sponsorsContent h1, .sponsorsContent p {
+	color: white;
+	padding: 10px;
+}
+
+.sponsors button p {
+	padding: 0;
+	margin: 0;
+}
+
+.sponsors button {
+	height: 50px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.flexImagesSponsors {
+	margin-top: 25px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.imgSp1 {
+	background: url('img/sponsors/mount.svg') no-repeat;
+	width: 178px;
+	height: 69px;
+}
+
+.imgSp2 {
+	background: url('img/sponsors/img2.png') no-repeat;
+	width: 95px;
+	height: 75px;
+}
+
+.imgSp3 {
+	background: url('img/sponsors/img3.svg') no-repeat;
+	width: 153px;
+	height: 28px;
+}
+
+/* Past Events Block */ 
+.TextEvents {
+	width: ;
 }
