@@ -328,7 +328,6 @@ form p {
 
 /* TIME TABLE ACTIONS */
 
-
 .menu a, .menu label {
 	text-decoration: none;
 	color: #fff;
@@ -354,25 +353,36 @@ form p {
 
 .menu-title {
 	cursor: pointer;
-}
-
-.menu-title {
 	display: block;
 	padding: 15px 55px;
 }
 
-.menu-title h1 {
+.menu_text h1 {
 	font-size: 30px;
-	position: absolute;
-	top: 0;	
-	bottom: 0;
 	display: inline-block;
-	left: 300px;
-	padding: 0;
-	top: 0;	
-	bottom: 0;
+	margin-left: 80px;
 	color: white;
-	
+	vertical-align: center;
+	padding: 0;
+}
+
+.menu_text p {
+	display: inline-block;
+	font-size: 30px;
+	font-weight: 700;
+	margin-left: 100px;
+	color: white;
+}
+
+.menu-title p {
+	font-size: 22px;
+	margin: 0 auto;
+	font-weight: 300;
+}
+
+.menu-title p:nth-child(2n) {
+	margin-left: 65px;
+
 }
 /*
 .first-title {
@@ -381,7 +391,6 @@ form p {
 */
 .activate {
 	display: none;
-
 	position: absolute;
 	cursor: pointer;
 	width: 100%;
@@ -393,20 +402,32 @@ form p {
 
 /* Skin */
 
-.menu a, .drop-down-menu {
-	background: #3d6d99;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5796d0), color-stop(100%,#3d6d99));
-	background: -moz-linear-gradient(top, #5796d0 0%, #3d6d99 100%);
+.menu a, .drop-down-menu:nth-child(2n) {
+	background: #373737;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#373737), color-stop(100%,#373737));
+	background: -moz-linear-gradient(top, #373737 0%, #373737 100%);
+}
+.menu a, .drop-down-menu:nth-child(2n-1) {
+	background: #4b4d4f;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4b4d4f), color-stop(100%,#4b4d4f));
+	background: -moz-linear-gradient(top, #4b4d4f 0%, #4b4d4f 100%);
 }
 
 .menu a:hover, .drop-down-menu:hover {
-	background: #5a6470;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#495261), color-stop(100%,#38404b));
-	background: -moz-linear-gradient(top, #495261 0%, #38404b 100%);
+	background: #5b673d;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5b673d), color-stop(100%,#5b673d));
+	background: -moz-linear-gradient(top, #5b673d 0%, #5b673d 100%);
 }
+
+
 
 .drop-down a {
 	background: #222;
+	padding-left: 60px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	color: #6c6c6c;
 }
 
 .drop-down a:hover {
@@ -415,9 +436,9 @@ form p {
 
 
 .menu  {
-	background: #3d6d99;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5796d0), color-stop(100%,#3d6d99));
-	background: -moz-linear-gradient(top, #5796d0 0%, #3d6d99 100%);
+	background: #a3cc40;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9ac13c), color-stop(100%,#a3cc40));
+	background: -moz-linear-gradient(top, #9ac13c 0%, #a3cc40 100%);
 }
 
 :checked ~ .menu-title {
