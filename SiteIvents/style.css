@@ -1,4 +1,6 @@
-
+html {
+	scroll-behavior: smooth;
+}
 body {
 	margin: 0;
 	padding: 0;
@@ -788,8 +790,11 @@ footer p {
 	float: right;
 	margin-top: -100px;
 	margin-right: 10px;
-	transition: 1s;
-	
+	transition: 1s;	
+}
+
+.arrowUp a {
+	color: white;
 }
 
 @keyframes bouncing{
