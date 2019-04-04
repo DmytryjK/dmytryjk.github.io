@@ -422,7 +422,9 @@ form p {
 	background: -moz-linear-gradient(top, #5b673d 0%, #5b673d 100%);
 }
 
-
+.drop-down-menu:last-child {
+	border-radius: 0  0 15px 15px;
+}
 
 .drop-down a {
 	background: #222;
@@ -442,6 +444,7 @@ form p {
 	background: #a3cc40;
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9ac13c), color-stop(100%,#a3cc40));
 	background: -moz-linear-gradient(top, #9ac13c 0%, #a3cc40 100%);
+	border-radius: 15px;
 }
 
 :checked ~ .menu-title {
