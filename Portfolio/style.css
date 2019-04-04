@@ -71,9 +71,10 @@ header a:hover {
 
 .AboutMe {
 	background-color: #030b1e;
-	height: 980px;
+	height: 880px;
 	background: url('images/bg_about.png') no-repeat;
 	background-position: 50% 0%;
+	background-attachment: fixed; /*create paralax*/
 	background-size: 100%;
 }
 
@@ -91,7 +92,7 @@ header a:hover {
 }
 
 .textAbout h1 {
-	margin-top: 30%;	
+	margin-top: 35%;	
 	font-size: 60px;
 	font-weight: 700;
 	margin-bottom: 0;
@@ -104,6 +105,18 @@ header a:hover {
 
 .buttons {
 	margin: 0 auto;
-	border: 1px solid;
 	text-align: center;
+}
+
+
+
+
+
+
+
+
+.test {
+	background-color: lightgray;
+	height: 2000px;
+	width: 100%;
 }
