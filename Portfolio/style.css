@@ -7,6 +7,15 @@ a {
 	text-decoration: none;
 }
 
+p {
+	text-indent: 1.5em;
+	text-align: justify;
+}
+
+h1 {
+	font-family: 'Poppins', sans-serif;
+}
+
 section {
 	margin: 0 auto;
 }
@@ -143,6 +152,7 @@ button:last-child {
 	background-color: white;
 	color: #117bfb;	
 }
+
 /* Block About Me */
 
 .bgAboutMe {
@@ -207,4 +217,281 @@ table a:hover {
 	color: #00aeff;
 }
 
+/* My Skills */
 
+.mySkills {
+	background-color: #f6f6f6;
+	width: 100%;
+}
+
+.centerText h1 {
+	margin-top: 100px;
+	color: #117bfb;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.tableOfMySkills {
+	margin: 0 auto;
+}
+
+span {
+	color: white;
+	font-family: 'Poppins', sans-serif;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+#codeconSkills {
+	font-size: 25px;
+	height: auto;
+}
+.codeconSkillbar {
+	height: 35px;
+	width: 750px;
+	position: relative;
+	background: #2b2b37;
+	margin: 40px auto;
+	border-bottom: 2px solid #010312;
+}
+
+#codeconHTML {
+	width: 70%;
+	height: 100%;
+	animation: Animate-HTML 4s;
+	-webkit-animation: Animate-HTML 4s;
+	-moz-animation: Animate-HTML 4s;
+	-o-animation: Animate-HTML 4s;
+	position: absolute;
+	background-color: #117bfb;
+}
+
+.PercentText {
+	position: relative;
+	padding-right: 15px;
+	float: right;
+}
+
+.tableOfMySkills:after, .tableOfMySkills::before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@keyframes Animate-HTML {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}@-webkit-keyframes Animate-HTML {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}@-moz-keyframes Animate-HTML {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}@-o-keyframes Animate-HTML {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}
+
+#codeconCSS {
+	width: 65%;
+	height: 100%;
+	animation: Animate-CSS 3s;
+	-webkit-animation: Animate-CSS 3s;
+	-moz-animation: Animate-CSS 3s;
+	-o-animation: Animate-CSS 3s;
+	position: absolute;
+	background-color: #117bfb;
+}
+
+@keyframes Animate-CSS {
+    from {
+    width: 10px;
+}
+to {
+    width: 65%}
+}@-webkit-keyframes Animate-CSS {
+    from {
+    width: 10px;
+}
+to {
+    width: 65%}
+}@-moz-keyframes Animate-CSS {
+    from {
+    width: 10px;
+}
+to {
+    width: 65%}
+}@-o-keyframes Animate-CSS {
+    from {
+    width: 10px;
+}
+to {
+    width: 65%}
+}
+
+#codeconEng {
+	width: 55%;
+	height: 100%;
+	animation: Animate-Eng 4s;
+	-webkit-animation: Animate-Eng 4s;
+	-moz-animation: Animate-Eng 4s;
+	-o-animation: Animate-Eng 4s;
+	position: absolute;
+	background-color: #117bfb;
+}
+
+@keyframes Animate-Eng {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}@-webkit-keyframes Animate-Eng {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}@-moz-keyframes Animate-Eng {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}@-o-keyframes Animate-Eng {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}
+
+
+#codeconJS {
+	width: 25%;
+	height: 100%;
+	animation: Animate-JS 2s;
+	-webkit-animation: Animate-JS 2s;
+	-moz-animation: Animate-JS 2s;
+	-o-animation: Animate-JS 2s;
+	position: absolute;
+	background-color: #117bfb;
+}
+
+@keyframes Animate-JS {
+    from {
+    width: 10px;
+}
+to {
+    width: 25%}
+}@-webkit-keyframes Animate-JS {
+    from {
+    width: 10px;
+}
+to {
+    width: 25%}
+}@-moz-keyframes Animate-JS {
+    from {
+    width: 10px;
+}
+to {
+    width: 25%}
+}@-o-keyframes Animate-JS {
+    from {
+    width: 10px;
+}
+to {
+    width: 25%}
+}
+
+
+#codeconGIT {
+	width: 15%;
+	height: 100%;
+	animation: Animate-GIT 1s;
+	-webkit-animation: Animate-GIT 1s;
+	-moz-animation: Animate-GIT 1s;
+	-o-animation: Animate-GIT 1s;
+	position: absolute;
+	background-color: #117bfb;
+}
+
+@keyframes Animate-GIT {
+    from {
+    width: 10px;
+}
+to {
+    width: 15%}
+}@-webkit-keyframes Animate-GIT {
+    from {
+    width: 10px;
+}
+to {
+    width: 15%}
+}@-moz-keyframes Animate-GIT {
+    from {
+    width: 10px;
+}
+to {
+    width: 15%}
+}@-o-keyframes Animate-GIT {
+    from {
+    width: 10px;
+}
+to {
+    width: 15%}
+}
+
+
+/* PORTFOLIO */
+
+.blockPortfolio {
+	background: url('images/Galery_bg.png') no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 1200px;
+	padding-top: 100px;
+}
+
+.blockPortfolio h1 {
+	color: white;
+	margin: 0 auto;
+}
+
+
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+
+.parallax__layer--back {
+  transform: translateZ(-1px);
+}
