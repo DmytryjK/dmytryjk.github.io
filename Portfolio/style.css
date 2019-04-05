@@ -7,14 +7,9 @@ a {
 	text-decoration: none;
 }
 
-
-
-/* Logo Header */
-
-
-
-
-/* Header nav menu */
+section {
+	margin: 0 auto;
+}
 
 .wrapper {
 	margin: 0 auto;
@@ -23,6 +18,13 @@ a {
 	height: 100%;
 }
 
+.clearfix {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+/* Logo Header */
 
 .logo {
 	background: url('images/logo.svg') no-repeat;
@@ -31,6 +33,8 @@ a {
 	float: left;
 	background-position: center;
 }
+
+/* Header nav menu */
 
 header {
 	height: 100px;
@@ -69,18 +73,18 @@ header a:hover {
 
 /* About ME */
 
-.AboutMe {
+.bgPhoto {
 	background-color: #030b1e;
 	height: 880px;
 	background: url('images/bg_about.png') no-repeat;
-	background-position: 50% 0%;
+	background-position: 100% 0%;
 	background-attachment: fixed; /*create paralax*/
-	background-size: 100%;
+	background-size: cover;
 }
 
 .textAbout {
 	padding: 0;
-	width: 730px;
+	width: 65%;
 	margin-left: 0;
 	display: inline-block;
 }
@@ -104,19 +108,103 @@ header a:hover {
 
 
 .buttons {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 	margin: 0 auto;
+}
+
+button {
+	margin: 20px;
+	width: 170px;
+	height: 50px;
+	border-radius: 30px;
+	border-style: none;
+	cursor: pointer;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-family: 'Poppins', sans-serif;
+	transition: 0.3s;
+}
+
+button:hover {
+	letter-spacing: 1px;
+	box-shadow: 0 0.5em 0.5em -0.1em rgba(59, 255, 212, 0.2);
+	transform: translateY(-0.05em);
+}
+
+button:first-child {
+	background-color: #117bfb;
+	color: white;	
+}
+
+button:last-child {
+	background-color: white;
+	color: #117bfb;	
+}
+/* Block About Me */
+
+.bgAboutMe {
+	background-color: #010312;
+	width: 100%;
+}
+
+.myPhoto {
+	padding-top: 120px;
+}
+
+.myPhoto img {
+	border-radius: 20px;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding-bottom: 200px;
+}
+
+.textAboutMe {
+	width: 500px;
+	padding-top: 100px;
+	color: white;
+	font-family: 'Poppins', sans-serif;
+}
+
+.textAboutMe h1 {
+	border: 2px solid white;
+	width: 140px;
+	padding: 5px;
 	text-align: center;
 }
 
-
-
-
-
-
-
-
-.test {
-	background-color: lightgray;
-	height: 2000px;
-	width: 100%;
+table {
+	margin-top: 30px;
+	border-bottom: 2px solid #626262;
+	padding-bottom: 40px;
+	width: 500px;
 }
+
+table tr:nth-child(2n-1) {
+	color: #117bfb;
+}
+
+table tr:nth-child(3) td{
+	padding-top: 40px;
+}
+
+table td {
+	width: 200px;
+	font-family: 'Poppins', sans-serif;
+}
+
+table a {
+	color: white;
+	transition: 0.2s;
+}
+table a:hover {
+	color: #00aeff;
+}
+
+
