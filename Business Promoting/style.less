@@ -1,0 +1,218 @@
+
+@pink: #fb3b64;
+@cyan: #08a6e4;
+@green: 5bddaf;
+@font: 'Poppins', sans-serif;
+
+/*all width psd 1600px*/
+.wrapper {
+	width: 71.25vw; /*1140px*/
+	margin: 0 auto;
+}
+
+button {
+	width: 130px;
+	height: 40px;
+	border-radius: 20px;
+	border: none;
+	outline: none;
+	font-family: @font;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-align: center;
+	transition: 0.4s;
+	color: white;
+
+		&:hover {
+			box-shadow: 0px 5px 15px 1px rgba(255, 255, 255, 0.3);
+		}
+}
+
+/* HEADER */
+header {
+	/*background-color: #071828;*/
+	background: url('img/bg.png') no-repeat;
+	background-size: cover;
+	margin: 0 auto;
+	height: 855px;
+	width: 100%;
+	overflow: hidden;
+	padding-top: 1.88vh;
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
+
+		nav {
+			width: 29.38 vw;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+
+			li {
+				display: inline;
+				padding-left: 1.56vw;
+
+				&:first-child {
+					padding-left: -1.56vw;
+				}
+				a {
+					text-transform: uppercase;
+					color: white;
+					font-family: @font;
+					transition: 0.4s;
+					font-size: 12px;
+
+					&:hover {
+						color: @cyan;
+					}
+					&:focus {
+						color: @pink;
+					}
+				}
+			}
+
+			.fa-search {
+				padding-left: 1.56vw;
+				color: white;
+				padding-right: 3.75vw;
+				transition: 0.4s;
+				
+				&:hover {
+					color: @cyan;
+				}
+			}
+
+			.signIn {
+				background-color: @pink;
+				color: white;
+			}
+		}
+
+	}
+
+}
+
+.textHeader {
+		color: white;
+		font-family: @font;
+		width: 610px;
+		margin-top: 15vh;
+
+			h1 {
+				font-size: 51px;
+				line-height: 1.5
+			}
+
+			p {
+				margin-top: 2.81vh;
+				font-size: 16px;
+				line-height: 1.5;
+			}
+
+			.headerButtons {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				padding: 0px 150px 0px 150px;
+
+				.Download {
+					background-color: @pink;
+					margin-top: 20px;
+				}
+
+				.DiscoverMore {
+					background-color: @cyan;
+					margin-top: 20px;
+				}
+			}
+	}
+.circle {
+	position: absolute;
+	background: url('img/Ellipse.png') no-repeat;
+	width: 327px;
+	height: 533px;
+	top: 520px;
+
+}
+
+/* About Product */
+
+.About {
+	position: relative;
+}
+
+.circleRight {
+	position: absolute;
+	background: url('img/Ellipse2.png') no-repeat;
+	width: 327px;
+	height: 469px;
+	right: 0px;
+	top: 200px;
+}
+
+.aboutInfo {
+	padding-top: 90px;	
+	
+	h1 {
+		text-align: center;
+		font-size: 36px;
+		font-family: @font;
+		font-weight: 700;
+	}
+
+	p {
+		width: 480px;
+		margin: 0 auto;
+		font-family: @font;
+		margin-top: 30px;
+		font-size: 12px;
+		line-height: 1.5;
+	}
+
+	.aboutFlex {
+		margin-top: 120px;
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		flex-wrap: wrap;
+		flex-direction: start;
+
+		p {
+			padding: 0;
+			margin-left: 0;
+			line-height: 2;
+		}
+
+		img {
+			z-index: 2;
+		}
+
+		.AboutMe {
+			background-color: @pink;
+			margin-top: 40px;
+		&:hover {
+			box-shadow: 0px 5px 15px 1px rgba(7, 24, 40, 0.7);
+			}
+		}
+
+	}
+}
+
+/* Get App */
+
+.getApp {
+	background: url('img/getApp.png')no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 322px;
+
+	.getAppDivb {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		align-content: center;
+	}
+}
