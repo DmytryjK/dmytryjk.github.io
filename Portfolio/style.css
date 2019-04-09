@@ -198,9 +198,11 @@ table a:hover {
 .mySkills {
   background-color: #f6f6f6;
   width: 100%;
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
 .centerText h1 {
-  margin-top: 100px;
+  margin-top: 50px;
   color: #117bfb;
   width: 100%;
   text-align: center;
