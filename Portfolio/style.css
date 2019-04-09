@@ -537,7 +537,10 @@ a:hover .fa-codepen {
   .textAbout {
     width: 100%;
   }
-  
+
+  table {
+  width: 100%;
+  }
   .flexWorks {
   display: flex;
   justify-content: center;
@@ -548,11 +551,6 @@ a:hover .fa-codepen {
 .examplesWorks {
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  margin-bottom: 100px;
-  margin-top: 100px;
-  box-shadow: 4px 4px 20px 0px rgba(173, 250, 255, 0.7);
-  padding: 10px;
 }
 }
 
@@ -562,27 +560,12 @@ a:hover .fa-codepen {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding-bottom: 200px;
 }
 .textAboutMe {
   width: 100%;
-  padding-top: 100px;
-  color: white;
-  font-family: 'Poppins', sans-serif;
-}
-.textAboutMe h1 {
-  border: 2px solid white;
-  width: 140px;
-  padding: 5px;
-  text-align: center;
 }
 
 .codeconSkillbar {
-  height: 35px;
   width: 100%;
-  position: relative;
-  background: #2b2b37;
-  margin: 40px auto;
-  border-bottom: 2px solid #010312;
 }
 }
