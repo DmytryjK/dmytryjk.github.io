@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>About Me</title>
+	<title>Dmytryj Kyzyma FrontEnd developer</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:700" rel="stylesheet">
@@ -17,10 +17,9 @@
 			<nav>
 				<ul>
 					<li><a href="">Home</a></li>
-					<li><a href="">About</a></li>
-					<li><a href="">Skills</a></li>				
-					<li><a href="">Portfolio</a></li>
-					<li><a href="">Contacts</a></li>
+					<li><a href="#AboutMe">About</a></li>
+					<li><a href="#Skills">Skills</a></li>	
+					<li><a href="#Portfolio">Portfolio</a></li>
 				</ul>
 			</nav>
 
@@ -34,7 +33,7 @@
 					<p>Web development it's my hobby. I really like to create new web-sites for people.</p>
 				
 				<div class="buttons">
-					<button type="button">My work</button>
+					<button type="button"><a href="#Portfolio">My work</a></button>
 					<button type="button">Hire me</button>
 				</div>
 			</div>
@@ -73,7 +72,7 @@
 						<tr>
 							<td>+38(099)-550-31-33</td>
 							<td>
-								<a href="https://www.linkedin.com/in/%D0%B4%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9-%D0%BA%D0%B8%D0%B7%D0%B8%D0%BC%D0%B0-69776b175/"><i class="fab fa-linkedin fa-2x"></i></i></a>
+								<a href="https://www.linkedin.com/in/%D0%B4%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9-%D0%BA%D0%B8%D0%B7%D0%B8%D0%BC%D0%B0-69776b175/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></i></a>
 							</td>
 						</tr>
 					</table>
@@ -81,14 +80,14 @@
 
 				<div class="buttons effectsButtons">
 					<button type="button">Send message</button>
-					<button type="button">Download CV</button>
+					<button type="button"><a class="download" href="https://drive.google.com/file/d/1yK3knQI_tw9JLXR6jihD8qeZd0eIFNEi/view?usp=sharing" target="_blank">Download CV</a></button>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<section class="mySkills" id="Skills">
-		<div class="wrapper container centerText">
+		<div class="wrapper centerText">
 			<h1>My Skills</h1>
 
 			<div class= "tableOfMySkills">
@@ -136,13 +135,35 @@
 
 	</section>
 
-	<section class="blockPortfolio">
+	<section class="blockPortfolio" id="Portfolio">
 		<div class="wrapper centerText">
 			<h1>My works</h1>
+			<div class="flexWorks">
+				<div class="examplesWorks">
+					<img src="images/works/Envato.png" alt="Envato web-site">
+					<h1>HTML5/CSS3</h1>
+						<a href="http://dmytryjk.github.io/SiteIvents/" target="_blank"><button class="effectsButtons worksButtnons" type="button">Open Site</button></a>
+				</div>
 
+				<div class="examplesWorks">
+					<img src="images/works/BusinessProject.png" alt="BusinessProject.png web-site">
+					<h1>HTML5/CSS3/LESS</h1>
+						<a href="https://dmytryjk.github.io/Business%20Promoting/" target="_blank"><button class="effectsButtons worksButtnons" type="button">Open Site</button></a>
+				</div>
+				<!-- My WORKS !-->
+			</div>
 		</div>
 	</section>
+	
+	<footer>
+		<div class="wrapper footerIcons">
+			<a href="https://www.linkedin.com/in/%D0%B4%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9-%D0%BA%D0%B8%D0%B7%D0%B8%D0%BC%D0%B0-69776b175/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+			<a href="https://github.com/DmytryjK" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>
+			<a href="https://codepen.io/dmytryjk/" target="_blank"><i class="fab fa-codepen fa-2x"></i></a>
+			<div class="CopyRight"><p>&copy Created by Dmytryj Kyzyma 2019</p></div>
+		</div>
 
+	</footer>
 
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	<script type="text/javascript" src="scripts/script.js"></script>
