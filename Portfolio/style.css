@@ -232,10 +232,10 @@ span {
 #codeconHTML {
   width: 70%;
   height: 100%;
-  animation: Animate-HTML 4s;
-  -webkit-animation: Animate-HTML 4s;
-  -moz-animation: Animate-HTML 4s;
-  -o-animation: Animate-HTML 4s;
+  animation: Animate-HTML 3s;
+  -webkit-animation: Animate-HTML 3s;
+  -moz-animation: Animate-HTML 3s;
+  -o-animation: Animate-HTML 3s;
   position: absolute;
   background-color: #117bfb;
 }
@@ -327,10 +327,10 @@ span {
 #codeconEng {
   width: 55%;
   height: 100%;
-  animation: Animate-Eng 4s;
-  -webkit-animation: Animate-Eng 4s;
-  -moz-animation: Animate-Eng 4s;
-  -o-animation: Animate-Eng 4s;
+  animation: Animate-Eng 3s;
+  -webkit-animation: Animate-Eng 3s;
+  -moz-animation: Animate-Eng 3s;
+  -o-animation: Animate-Eng 3s;
   position: absolute;
   background-color: #117bfb;
 }
@@ -367,7 +367,7 @@ span {
   }
 }
 #codeconJS {
-  width: 25%;
+  width: 30%;
   height: 100%;
   animation: Animate-JS 2s;
   -webkit-animation: Animate-JS 2s;
@@ -381,7 +381,7 @@ span {
     width: 10px;
   }
   to {
-    width: 25%;
+    width: 30%;
   }
 }
 @-webkit-keyframes Animate-JS {
@@ -389,7 +389,7 @@ span {
     width: 10px;
   }
   to {
-    width: 25%;
+    width: 30%;
   }
 }
 @-moz-keyframes Animate-JS {
@@ -397,7 +397,7 @@ span {
     width: 10px;
   }
   to {
-    width: 25%;
+    width: 30%;
   }
 }
 @-o-keyframes Animate-JS {
@@ -405,16 +405,16 @@ span {
     width: 10px;
   }
   to {
-    width: 25%;
+    width: 30%;
   }
 }
 #codeconGIT {
-  width: 15%;
+  width: 30%;
   height: 100%;
-  animation: Animate-GIT 1s;
-  -webkit-animation: Animate-GIT 1s;
-  -moz-animation: Animate-GIT 1s;
-  -o-animation: Animate-GIT 1s;
+  animation: Animate-GIT 2s;
+  -webkit-animation: Animate-GIT 2s;
+  -moz-animation: Animate-GIT 2s;
+  -o-animation: Animate-GIT 2s;
   position: absolute;
   background-color: #117bfb;
 }
@@ -423,7 +423,7 @@ span {
     width: 10px;
   }
   to {
-    width: 15%;
+    width: 30%;
   }
 }
 @-webkit-keyframes Animate-GIT {
@@ -431,7 +431,7 @@ span {
     width: 10px;
   }
   to {
-    width: 15%;
+    width: 30%;
   }
 }
 @-moz-keyframes Animate-GIT {
@@ -439,7 +439,7 @@ span {
     width: 10px;
   }
   to {
-    width: 15%;
+    width: 30%;
   }
 }
 @-o-keyframes Animate-GIT {
@@ -447,7 +447,93 @@ span {
     width: 10px;
   }
   to {
-    width: 15%;
+    width: 30%;
+  }
+}
+
+#codeconPS {
+  width: 65%;
+  height: 100%;
+  animation: Animate-Ps 3s;
+  -webkit-animation: Animate-Ps 3s;
+  -moz-animation: Animate-Ps 3s;
+  -o-animation: Animate-Ps 3s;
+  position: absolute;
+  background-color: #117bfb;
+}
+@keyframes Animate-Ps {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 65%;
+  }
+}
+@-webkit-keyframes Animate-Ps {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 65%;
+  }
+}
+@-moz-keyframes Animate-Ps {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 65%;
+  }
+}
+@-o-keyframes Animate-Ps {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 65%;
+  }
+}
+
+#codeconAi {
+  width: 35%;
+  height: 100%;
+  animation: Animate-Ai 2s;
+  -webkit-animation: Animate-Ai 2s;
+  -moz-animation: Animate-Ai 2s;
+  -o-animation: Animate-Ai 2s;
+  position: absolute;
+  background-color: #117bfb;
+}
+@keyframes Animate-Ai {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 35%;
+  }
+}
+@-webkit-keyframes Animate-Ai {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 35%;
+  }
+}
+@-moz-keyframes Animate-Ai {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 35%;
+  }
+}
+@-o-keyframes Animate-Ai {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 35%;
   }
 }
 /* PORTFOLIO */

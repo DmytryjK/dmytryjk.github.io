@@ -7,6 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Poppins:700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="animate.css">
 </head>
 <body>
 
@@ -29,8 +30,8 @@
 	<section class="bgPhoto">
 		<div class="wrapper">
 			<div class="textAbout">
-				<h1>I'm a Front-end Dev.</h1>
-					<p>Web development it's my hobby. I really like to create new web-sites for people.</p>
+				<h1 class="wow fadeInLeft">I'm a Front-end Dev.</h1>
+					<p class="wow fadeInRight">Web development it's my hobby. I really like to create new web-sites for people.</p>
 				
 				<div class="buttons">
 					<button type="button"><a href="#Portfolio">My work</a></button>
@@ -87,7 +88,7 @@
 	</section>
 
 	<section class="mySkills" id="Skills">
-		<div class="wrapper centerText">
+		<div class="wrapper centerText animation">
 			<h1>My Skills</h1>
 
 			<div class= "tableOfMySkills">
@@ -118,16 +119,31 @@
 					<div class="codeconSkillbar">
 						<div id="codeconJS">
 							<span class="codeconSkillArea">JS</span>
-							<span class="PercentText ">25%</span>
+							<span class="PercentText ">30%</span>
 						</div>
 					</div>
 
 					<div class="codeconSkillbar">
 						<div id="codeconGIT">
-							<span class="codeconSkillArea ">GIT</span>
-							<span class="PercentText">15%</span>
+							<span class="codeconSkillArea">GIT</span>
+							<span class="PercentText">30%</span>
 						</div>
 					</div>
+
+					<div class="codeconSkillbar">
+						<div id="codeconPS">
+							<span class="codeconSkillArea">Ps</span>
+							<span class="PercentText">65%</span>
+						</div>
+					</div>
+
+					<div class="codeconSkillbar">
+						<div id="codeconAi">
+							<span class="codeconSkillArea">Ai</span>
+							<span class="PercentText">35%</span>
+						</div>
+					</div>
+
 				</div>
 			</div>
 
@@ -139,13 +155,13 @@
 		<div class="wrapper centerText">
 			<h1>My works</h1>
 			<div class="flexWorks">
-				<div class="examplesWorks">
+				<div class=" examplesWorks wow bounceInLeft" data-wow-duration="2s">
 					<img src="images/works/Envato.png" alt="Envato web-site">
 					<h1>HTML5/CSS3</h1>
 						<a href="http://dmytryjk.github.io/SiteIvents/" target="_blank"><button class="effectsButtons worksButtnons" type="button">Open Site</button></a>
 				</div>
 
-				<div class="examplesWorks">
+				<div class="examplesWorks wow bounceInRight" data-wow-duration="2s">
 					<img src="images/works/BusinessProject.png" alt="BusinessProject.png web-site">
 					<h1>HTML5/CSS3/LESS</h1>
 						<a href="https://dmytryjk.github.io/Business%20Promoting/" target="_blank"><button class="effectsButtons worksButtnons" type="button">Open Site</button></a>
@@ -166,6 +182,7 @@
 	</footer>
 
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-	<script type="text/javascript" src="scripts/script.js"></script>
+	<script type="text/javascript" src="scripts/wow.min.js"></script>
+	<script>new WOW().init();</script>
 </body>
 </html>
