@@ -1,7 +1,7 @@
-var el = $('.codeconSkillbar div');
-
-$(window).scroll(function(){
-    if ( $(this).scrollTop() > el.offset().top - 200 ) {
-        el.addId(@keyframes);
-    }
-});
+/*Preloader*/
+	$(window).on('load', function () {
+	    $preloader = $('#preloader'),
+	      $loader = $preloader.find('#loader');
+	    $loader.fadeOut();
+	    $preloader.delay(200).fadeOut('slow');
+	  });
