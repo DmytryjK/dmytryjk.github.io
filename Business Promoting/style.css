@@ -391,3 +391,110 @@ header .header nav .signIn {
 .pricingPlan .flexPrice button.flexPrice__thirdBtn {
   background-color: #5bddaf;
 }
+/* Block How it works */
+.howItWorks .P_center {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 480px;
+}
+.howItWorks .FlexHowItWorks {
+  padding-top: 85px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+}
+.howItWorks .FlexHowItWorks .Elips {
+  position: absolute;
+  width: 515px;
+  height: 515px;
+  border-radius: 50%;
+  border: 2px solid #fb3b64;
+  left: 25%;
+}
+.howItWorks .FlexHowItWorks .Phone {
+  margin-top: -40px;
+  height: 616px;
+  width: 300px;
+  position: relative;
+  background: url('img/howItWorks_phone.png') 100% 100% no-repeat;
+  background-size: cover;
+  z-index: 2;
+}
+.howItWorks .FlexHowItWorks .notesStep {
+  position: relative;
+  width: 100%;
+  max-width: 425px;
+  height: auto;
+  margin-left: 200px;
+  z-index: 2;
+}
+.howItWorks .FlexHowItWorks .notesStep h2 {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+  margin-bottom: 15px;
+}
+.howItWorks .FlexHowItWorks .notesStep p {
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.howItWorks .FlexHowItWorks .notesStep .notesStepStyles {
+  width: 315px;
+  border-radius: 15px;
+  padding: 30px 10px 10px 10px;
+  background-color: white;
+}
+.howItWorks .FlexHowItWorks .notesStep .notesStep__first {
+  border: 2px solid #fb3b64;
+  position: relative;
+  margin-bottom: 25px;
+}
+.howItWorks .FlexHowItWorks .notesStep .notesStep__first::before {
+  content: '1';
+  position: absolute;
+  color: #fb3b64;
+  opacity: 0.3;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  top: 15px;
+  left: 55px;
+}
+.howItWorks .FlexHowItWorks .notesStep .notesStep__second {
+  position: relative;
+  border: 2px solid #08a6e4;
+  margin-bottom: 25px;
+  margin-left: 20%;
+}
+.howItWorks .FlexHowItWorks .notesStep .notesStep__second::before {
+  content: '2';
+  position: absolute;
+  color: #08a6e4;
+  opacity: 0.3;
+  font-family: #08a6e4;
+  font-weight: bold;
+  font-size: 50px;
+  top: 15px;
+  left: 55px;
+}
+.howItWorks .FlexHowItWorks .notesStep .notesStep__third {
+  position: relative;
+  border: 2px solid #5bddaf;
+}
+.howItWorks .FlexHowItWorks .notesStep .notesStep__third::before {
+  content: '3';
+  position: absolute;
+  color: #5bddaf;
+  opacity: 0.3;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  top: 15px;
+  left: 55px;
+}

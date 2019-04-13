@@ -462,3 +462,130 @@ header {
 
 	 }
 }
+
+/* Block How it works */
+.howItWorks {
+	.P_center {
+			display: block;
+			margin: 0 auto;	
+			margin-top: 30px;
+			width: 480px;
+
+	}
+	.FlexHowItWorks {
+		padding-top: 85px;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		padding-bottom: 50px;
+
+		.Elips {
+			position: absolute;
+			width: 515px;
+			height: 515px;
+			border-radius: 50%;
+			border: 2px solid @pink;
+			left: 25%;
+		}
+		
+		.Phone {
+			margin-top: -40px;
+			height: 616px;
+			width: 300px;
+			position: relative;
+			background: url('img/howItWorks_phone.png') 100% 100% no-repeat;
+			background-size: cover;
+			z-index: 2;
+		}
+
+		.notesStep {
+			position: relative;
+			width: 100%;
+			max-width: 425px;
+			height: auto;
+			margin-left: 200px;
+			z-index: 2;
+
+			h2 {
+				font-size: 15px;
+				font-weight: bold;
+				font-family: @font;
+				text-align: left;
+				margin-bottom: 15px;
+			}
+
+			p {
+				font-size: 12px;
+				font-family: @font;
+				margin-bottom: 10px;
+				line-height: 1.5;
+			}
+			
+			.notesStepStyles {
+				width: 315px;
+				border-radius: 15px;
+				padding: 30px 10px 10px 10px;
+				background-color: white;
+			}
+
+			.notesStep__first {	
+				border: 2px solid @pink;
+				position: relative;
+				margin-bottom: 25px;
+			
+			&::before {
+				content: '1';
+				position: absolute;
+				color: @pink;
+				opacity: 0.3;
+				font-family: @font;
+				font-weight: bold;
+				font-size: 50px;
+				top: 15px;
+				left: 55px;
+			}
+
+			}
+
+			.notesStep__second {
+				position: relative;	
+				border: 2px solid @cyan;
+				margin-bottom: 25px;
+				margin-left: 20%;
+			
+			&::before {
+				content: '2';
+				position: absolute;
+				color: @cyan;
+				opacity: 0.3;
+				font-family: @cyan;
+				font-weight: bold;
+				font-size: 50px;
+				top: 15px;
+				left: 55px;
+			}
+
+			}
+
+			.notesStep__third {
+				position: relative;	
+				border: 2px solid @green;
+			
+			&::before {
+				content: '3';
+				position: absolute;
+				color: @green;
+				opacity: 0.3;
+				font-family: @font;
+				font-weight: bold;
+				font-size: 50px;
+				top: 15px;
+				left: 55px;
+			}
+
+			}
+
+		}
+	}
+}
