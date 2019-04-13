@@ -27,6 +27,10 @@ h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
 }
+p {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+}
 /* HEADER */
 header {
   /*background-color: #071828;*/
@@ -385,16 +389,26 @@ header .header nav .signIn {
 .pricingPlan .flexPrice button.flexPrice__firstBtn {
   background-color: #fb3b64;
 }
+.pricingPlan .flexPrice button.flexPrice__firstBtn:hover {
+  box-shadow: 0px 0px 15px 2px rgba(251, 59, 100, 0.5);
+}
 .pricingPlan .flexPrice button.flexPrice__secondBtn {
   background-color: #08a6e4;
 }
+.pricingPlan .flexPrice button.flexPrice__secondBtn:hover {
+  box-shadow: 0px 0px 15px 2px rgba(8, 166, 228, 0.5);
+}
 .pricingPlan .flexPrice button.flexPrice__thirdBtn {
   background-color: #5bddaf;
+}
+.pricingPlan .flexPrice button.flexPrice__thirdBtn:hover {
+  box-shadow: 0px 0px 15px 2px rgba(91, 221, 175, 0.5);
 }
 /* Block How it works */
 .howItWorks .P_center {
   display: block;
   margin: 0 auto;
+  text-align: center;
   margin-top: 30px;
   width: 480px;
 }
