@@ -1,0 +1,93 @@
+
+.BgForm {
+	margin: 0 auto;
+	padding: 0;
+	font-size: 20px;
+	font-family: 'Poppins', sans-serif;
+}
+
+legend {
+	margin-bottom: 20px;
+	border-bottom: 2px solid #09dff2;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 25px;
+	width: 100%;
+	color: #ff3d5d;
+}
+
+
+.form-group {
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+form {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	right: 50%;
+	height: auto;
+	width: auto;
+	margin-left: -220px;
+	margin-right: -220px;
+	padding: 40px;
+	border-radius: 30px;
+	background-color: rgba(255,255,255,.5);
+	box-shadow: 6px 6px 20px 5px rgba(0, 145, 255, 0.32);
+}
+
+input {
+	width: 100%;
+	border: 2px solid #09dff2;
+	border-radius: 10px;
+	padding-left: 10px;
+	font-size: 20px;
+	font-family: 'Poppins', sans-serif;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: gray;
+  opacity: 0.5; /* Firefox */
+  font-size: 18px;
+}
+
+
+input:focus {
+	outline: 0;
+}
+
+textarea {
+	resize: none;
+	width: 100%;
+	border-radius: 10px;
+	border: 2px solid #09dff2;
+	padding-left: 10px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 18px;
+}
+textarea:focus {
+	outline: 0;
+}
+
+button {
+	display: block;
+	margin: 0 auto;
+	margin-top: 10px;
+	height: 40px;
+	border-radius: 15px;
+	border: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: white;
+	width: 100%;
+	background-color: #ff3d5d;
+	cursor: pointer;
+	transition: 0.4s; 
+}
+
+button:hover {
+	letter-spacing: 2px;
+	background-color: #09dff2;
+}
