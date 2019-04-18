@@ -529,6 +529,49 @@ span {
   }
 }
 
+#codeconLess {
+  width: 45%;
+  height: 100%;
+  animation: Animate-Less 2s;
+  -webkit-animation: Animate-Less 2s;
+  -moz-animation: Animate-Less 2s;
+  -o-animation: Animate-Less 2s;
+  position: absolute;
+  background-color: #117bfb;
+}
+@keyframes Animate-Less {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 45%;
+  }
+}
+@-webkit-keyframes Animate-Less {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 45%;
+  }
+}
+@-moz-keyframes Animate-Less {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 45%;
+  }
+}
+@-o-keyframes Animate-Less {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 45%;
+  }
+}
+
 #codeconPS {
   width: 65%;
   height: 100%;
