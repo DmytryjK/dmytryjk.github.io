@@ -155,7 +155,7 @@ header a:hover {
 .bgPhoto {
   background-color: #030b1e;
   height: 880px;
-  background: url('images/bg_about.png') no-repeat;
+  background: url('images/bg_about2.png') no-repeat;
   background-position: 100% 0%;
   background-attachment: fixed;
   /*create paralax*/
