@@ -105,7 +105,7 @@
   display: block;
 }
 .header__popup-input:checked + .header__popup-btn-img {
-  border: 2px solid white;
+  border: 1px solid white;
   border-radius: 8px;
 }
 .header__popup-input:checked + .header__popup-btn-img:after {
@@ -117,6 +117,10 @@
   transform: translateY(21px);
   transition: 0.3s visibility;
   transition: 0.3s transform;
+}
+.header__popup-input:focus + .header__popup-btn-img {
+  outline: 1px solid white;
+  border-radius: 5px;
 }
 .header__popup-submenu {
   position: absolute;
