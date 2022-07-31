@@ -1,14 +1,12 @@
 @font-face {
   font-family: "inter-regular";
-  src: url("../fonts/Inter2/converted/Inter-Regular.eot");
-  src: url("../fonts/Inter2/converted/Inter-Regular.woff") format("woff"), url("../fonts/Inter2/converted/Inter-Regular.otf") format("opentype"), url("../fonts/Inter2/converted/Inter-Regular.ttff") format("truetype");
+  src: url("../fonts/Inter2/converted/Inter-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "inter-bold";
-  src: url("../fonts/Inter2/converted/Inter-Bold.eot");
-  src: url("../fonts/Inter2/converted/Inter-Bold.woff") format("woff"), url("../fonts/Inter2/converted/Inter-Bold.otf") format("opentype"), url("../fonts/Inter2/converted/Inter-Bold.ttff") format("truetype");
+  src: url("../fonts/Inter2/converted/Inter-Regular.woff") format("woff");
   font-weight: 700;
   font-style: bold;
 }
@@ -138,7 +136,7 @@
   width: 105%;
   z-index: -1;
   list-style-type: none;
-  border: 1px solid #1C1B1E;
+  border: 1px solid #252525;
   border-radius: 5px;
   box-shadow: 1px 2px 3px grey;
   transform: translateY(-600px);
@@ -168,7 +166,7 @@
 }
 .header__popup-link:hover {
   padding: 5px 0;
-  filter: drop-shadow(0px 1px 2px grey);
+  filter: drop-shadow(0px 1px 4px lightgrey);
   border: 1px solid lightgrey;
   border-radius: 5px;
   transform: translateY(1px);
@@ -179,7 +177,7 @@
   border-radius: 5px;
 }
 .header__popup-link:active {
-  outline: solid lightskyblue;
+  outline: solid lightblue;
   border-radius: 5px;
 }
 .header__popup-img {
@@ -195,7 +193,7 @@
   grid-column-end: 4;
   height: 40px;
   width: 100%;
-  background-color: lightgrey;
+  background-color: #252525;
 }
 .header__popup-input-more {
   -webkit-appearance: none;
@@ -216,6 +214,9 @@
 .header__popup-input-more:focus + .header__popup-btn-text {
   background-color: lightblue;
 }
+.header__popup-input-more:focus + .header__popup-btn-text:hover {
+  color: #252525;
+}
 .header__popup-btn-text {
   display: flex;
   justify-content: center;
@@ -228,7 +229,7 @@
   text-decoration: none;
 }
 .header__popup-btn-text:hover {
-  color: black;
+  color: white;
   transition: 0.3s color;
 }
 .header__more-content {
