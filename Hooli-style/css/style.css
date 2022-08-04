@@ -214,6 +214,10 @@
   height: 40px;
   cursor: pointer;
 }
+.header__popup-input-more:hover + .header__popup-btn-text {
+  color: white;
+  transition: 0.3s color;
+}
 .header__popup-input-more:checked ~ .header__more-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -247,10 +251,6 @@
   cursor: pointer;
   transition: 0.3s color;
   text-decoration: none;
-}
-.header__popup-btn-text:hover {
-  color: white;
-  transition: 0.3s color;
 }
 .header__more-content {
   list-style-type: none;
