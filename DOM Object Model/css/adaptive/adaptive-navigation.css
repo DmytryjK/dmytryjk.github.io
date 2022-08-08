@@ -1,0 +1,32 @@
+.adaptive {
+  top: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+}
+.adaptive__navigation {
+  height: 100%;
+}
+.adaptive__navigation-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.adaptive__navigation-item {
+  width: 100%;
+  height: 10%;
+}
+.adaptive__navigation-button {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  cursor: pointer;
+}
