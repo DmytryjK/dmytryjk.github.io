@@ -10,6 +10,11 @@ const baseConfig = {
     speedRandom(minSpeed = 150, maxSpeed = 350) {
         maxSpeed -= minSpeed;
         return Math.floor(Math.random() * ++maxSpeed) + minSpeed;
+    },
+    numberOfFields: {
+        1: 50,
+        2: 135,
+        3: 220
     }
 };
 
@@ -108,21 +113,19 @@ class Player {
 const player = new Player(baseConfig);
 const allEnemies = [];
 
-createEnemies(10);
+createEnemies(3, 2);
+createEnemies(10, 1);
+createEnemies(7, 3);
 
-function createEnemies(n = 1) {
-    let firstCoordinateOfEnemyes = 50;
-    let changeableCoordinateOfEnemyes = 50;
-    const stepCoordinateOfEnemyes = 85;
+function createEnemies(n = 1, row = 1) {
+    const rowNumber = baseConfig.numberOfFields[row];
     
+    if (rowNumber === undefined) {
+        console.error('WARNING! row value must be between 1, 2 or 3');
+    }
+
     for (let i = 0; i < n; i++) {
-        allEnemies.push(new Enemy(0, changeableCoordinateOfEnemyes, baseConfig, player));
-
-        changeableCoordinateOfEnemyes += stepCoordinateOfEnemyes;
-
-        if (changeableCoordinateOfEnemyes >= (firstCoordinateOfEnemyes + stepCoordinateOfEnemyes * 2 + 1)) {
-            changeableCoordinateOfEnemyes = 50;  
-        }
+        allEnemies.push(new Enemy(0, rowNumber, baseConfig, player));
     }
 }
 
