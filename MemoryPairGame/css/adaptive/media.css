@@ -6,6 +6,15 @@
     height: 90%;
   }
 }
+@media (max-width: 1500px) and (max-height: 900px) {
+  .main .main__cards {
+    padding: 30px;
+    grid-template-rows: repeat(4, 1fr);
+    height: 90%;
+    gap: 30px;
+    width: 600px;
+  }
+}
 @media (max-width: 800px) {
   .main {
     position: static;
