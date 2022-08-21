@@ -3,70 +3,70 @@
 const baseConfig = {
     fieldWidth: 400,
     fieldHeight: 390, 
-    heroWidth: 100,
+    characterWidth: 100,
     heroHeight: 170,
-    enemyWidth: 100,
     enemyLinkImg: 'images/enemy-bug.png',
     playerLinkImg: 'images/char-cat-girl.png',
-    speedRandom(minSpeed = 150, maxSpeed = 300) {
+    speedRandom(minSpeed = 150, maxSpeed = 350) {
         maxSpeed -= minSpeed;
         return Math.floor(Math.random() * ++maxSpeed) + minSpeed;
     }
 };
 
-//---------------SCORE--------------
 const body = document.querySelector('body'),
       scoreBlock = document.createElement('div');
 let scoreCount = 0;
 body.prepend(scoreBlock);
 score();
-//------------------------------------------
 
 class Enemy {
-    constructor(x, y, speedX, sprite, fieldWidth, enemyWidth) {
+    constructor(x, y, baseConfig, player) {
         this.x = x;
         this.y = y;
-        this.sprite = sprite;
-        this.speed = speedX;
-        this.fieldWidth = fieldWidth;
-        this.enemyWidth = enemyWidth;
+        this.sprite = baseConfig.enemyLinkImg;
+        this.speed = baseConfig.speedRandom();
+        this.fieldWidth = baseConfig.fieldWidth;
+        this.characterWidth = baseConfig.characterWidth;
+        this.player = player;
     }
-    update(dt) {
-        if (this.x > this.fieldWidth + this.enemyWidth) {
-            this.x = -this.enemyWidth;
-            this.speed = baseConfig.speedRandom();
-        }
+    update(dt) {    
         this.x += this.speed * dt;
+        this.collisionСheck();
+        this.addingRandomSpeed();
     }
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
+    collisionСheck() {
+        if(this.player.y == this.y && this.player.x <= Math.floor(this.x) + this.player.characterWidth / 1.5 && this.player.x >= Math.floor(this.x) - this.player.characterWidth / 1.5 ) {
+            setTimeout(deletePopupMessage, 1000, 'body', 'popUp');
+            showPopupMessage('div','popUp', 'body', 'You losе, bro :(');
+            resetPlayerPosition(player);
+            scoreCount = 0;
+            score(scoreCount);
+        }
+    }
+    addingRandomSpeed() {
+        if (this.x > this.fieldWidth + this.characterWidth) {
+            this.x = -this.characterWidth;
+            this.speed = baseConfig.speedRandom();
+        }
+    }
 };
 
 class Player {
-    constructor(fieldWidth, fieldHeight, sprite, heroWidth, heroHeight) {
-        this.x = fieldWidth / 2;
-        this.y = fieldHeight;
-        this.sprite = sprite;
-        this.fieldWidth = fieldWidth;
-        this.fieldHeight = fieldHeight;
-        this.heroWidth = heroWidth;
-        this.heroHeight = heroHeight;
+    constructor(baseConfig) {
+        this.x = baseConfig.fieldWidth / 2;
+        this.y = baseConfig.fieldHeight;
+        this.sprite = baseConfig.playerLinkImg;
+        this.fieldWidth = baseConfig.fieldWidth;
+        this.fieldHeight = baseConfig.fieldHeight;
+        this.characterWidth = baseConfig.characterWidth;
+        this.heroHeight = baseConfig.heroHeight;
     }
     update(dt) {
-        if (player.x < 0 || 
-            player.x > player.fieldWidth || 
-            player.y > player.fieldHeight) {
-                resetPlayerPosition(player);
-        } 
-        if (player.y <= 0) {
-            setTimeout(deletePopupMessage, 1000, 'body', 'popUp');
-            showPopupMessage('div','popUp', 'body', 'You win! :)');
-            resetPlayerPosition(player); 
-            scoreCount ++;
-            score();
-        }
-        collisionResetPositions(player, firstEnemy, secondEnemy, thirdEnemy);
+        this.outOfFiledCheck();
+        this.checkingForVictory();
     }
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
@@ -74,28 +74,57 @@ class Player {
     handleInput(key) {
         switch(key) {
             case "left":
-                this.x += -this.heroWidth; 
+                this.x += -this.characterWidth; 
                 break;
             case "up":
                 this.y += -this.heroHeight/2; 
                 break;
             case "right":
-                this.x += this.heroWidth; 
+                this.x += this.characterWidth; 
                 break;
             case "down":
                 this.y += this.heroHeight/2;
                 break;
         }
     }
+    outOfFiledCheck() {
+        if (this.x < 0 || 
+            this.x > this.fieldWidth || 
+            this.y > this.fieldHeight) {
+                resetPlayerPosition(player);
+        } 
+    }
+    checkingForVictory() {
+        if (this.y <= 0) {
+            setTimeout(deletePopupMessage, 1000, 'body', 'popUp');
+            showPopupMessage('div','popUp', 'body', 'You win! :)');
+            resetPlayerPosition(player); 
+            scoreCount ++;
+            score();
+        }
+    }
 };
 
-const   firstEnemy  = new Enemy(0, 60, baseConfig.speedRandom(), baseConfig.enemyLinkImg, baseConfig.fieldWidth, baseConfig.enemyWidth),
-        secondEnemy  = new Enemy(0, 145, baseConfig.speedRandom(), baseConfig.enemyLinkImg, baseConfig.fieldWidth, baseConfig.enemyWidth),
-        thirdEnemy  = new Enemy(0, 230, baseConfig.speedRandom(), baseConfig.enemyLinkImg, baseConfig.fieldWidth, baseConfig.enemyWidth);
+const player = new Player(baseConfig);
+const allEnemies = [];
 
-const player = new Player(baseConfig.fieldWidth, baseConfig.fieldHeight, baseConfig.playerLinkImg, baseConfig.heroWidth, baseConfig.heroHeight);
+createEnemies(10);
 
-const allEnemies = [firstEnemy, secondEnemy, thirdEnemy];
+function createEnemies(n = 1) {
+    let firstCoordinateOfEnemyes = 50;
+    let changeableCoordinateOfEnemyes = 50;
+    const stepCoordinateOfEnemyes = 85;
+    
+    for (let i = 0; i < n; i++) {
+        allEnemies.push(new Enemy(0, changeableCoordinateOfEnemyes, baseConfig, player));
+
+        changeableCoordinateOfEnemyes += stepCoordinateOfEnemyes;
+
+        if (changeableCoordinateOfEnemyes >= (firstCoordinateOfEnemyes + stepCoordinateOfEnemyes * 2 + 1)) {
+            changeableCoordinateOfEnemyes = 50;  
+        }
+    }
+}
 
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
@@ -108,29 +137,6 @@ document.addEventListener('keyup', function(e) {
         player.handleInput(allowedKeys[e.keyCode]);
     }
 });
-
-function collisionResetPositions(player, firstEnemy, secondEnemy, thirdEnemy) {
-        if (player.y <= thirdEnemy.y && 
-            player.y > secondEnemy.y && 
-            player.x <= Math.floor(thirdEnemy.x) + player.heroWidth/1.5 && 
-            player.x >= Math.floor(thirdEnemy.x) - player.heroWidth/1.5 
-            ||
-            player.y <= secondEnemy.y && 
-            player.y > firstEnemy.y &&
-            player.x <= Math.floor(secondEnemy.x) + player.heroWidth/1.5 && 
-            player.x >= Math.floor(secondEnemy.x) - player.heroWidth/1.5 
-            ||
-            player.y <= firstEnemy.y && 
-            player.y > 0 && 
-            player.x <= Math.floor(firstEnemy.x) + player.heroWidth/1.5 && 
-            player.x >= Math.floor(firstEnemy.x) - player.heroWidth/1.5) {
-                setTimeout(deletePopupMessage, 1000, 'body', 'popUp');
-                showPopupMessage('div','popUp', 'body', 'You losе, bro :(');
-                resetPlayerPosition(player);
-                scoreCount = 0;
-                score(scoreCount);
-        }
-    }
 
 function resetPlayerPosition(player) {
     player.x = player.fieldWidth / 2;
