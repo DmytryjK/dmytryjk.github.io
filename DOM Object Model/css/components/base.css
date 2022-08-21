@@ -14,8 +14,3 @@ body, html {
 .body__active {
   overflow: hidden;
 }
-
-.container {
-  width: 90%;
-  margin: 0 auto;
-}
