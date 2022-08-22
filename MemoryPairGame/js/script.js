@@ -67,17 +67,19 @@ parrentCardBlock.addEventListener('click', e => {
     
     if (parrentTarget.classList.contains('main__card')) {
         parrentTarget.classList.add('active-card');
+        parrentTarget.style.cssText += 'pointer-events: none';
         activeCards.push(parrentTarget);
     }
+
     if (activeCards.length >= 2) {
         listCards.forEach(e => {
             e.style.cssText += 'pointer-events: none';
         });
 
         if(activeCards[0].getAttribute(["data-name"]) === activeCards[1].getAttribute(["data-name"]) && activeCards[0].getAttribute(["data-numbers"]) !== activeCards[1].getAttribute(["data-numbers"])) {
-            setTimeout(hideTwoCards, 500, activeCards);
+            setTimeout(hideTwoCards, 600, activeCards);
         } else {
-            setTimeout(closeTwoCards, 500, activeCards);
+            setTimeout(closeTwoCards, 800, activeCards);
         }
   
         if (numbersOfCloseCards === elementsOfCards.length / 2 - 1) {
@@ -110,9 +112,12 @@ function hideTwoCards(cards) {
         e.style.visibility = "hidden";
     });
     listCards.forEach(e => {
+      if (!e.style.visibility) {
         e.style.cssText += 'pointer-events: auto';
+      }
     });
-    numbersOfCloseCards ++;
+
+    numbersOfCloseCards ++; 
 }
 
 function closeTwoCards(cards) {
@@ -122,6 +127,8 @@ function closeTwoCards(cards) {
     listCards.forEach(e => {
       e.style.cssText += 'pointer-events: auto';
     });
+
+    activeCards = [];
 }
 
 function showAllCards() {

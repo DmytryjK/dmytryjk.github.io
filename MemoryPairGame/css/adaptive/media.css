@@ -33,11 +33,11 @@
     filter: drop-shadow(0px 0px 10px rgb(20, 0, 0));
     transform: scale(1);
   }
-  .main .winMessage__active .winMessage__title {
+  .main .winMessage .winMessage__title {
     padding-left: 0px;
     font-size: 32px;
   }
-  .main .winMessage__active .winMessage__image {
+  .main .winMessage .winMessage__image {
     width: 80%;
   }
   .main .click-to-continue:hover {
@@ -84,11 +84,11 @@
   .main .main__card-front {
     border-radius: 10px;
   }
-  .main .winMessage__active .winMessage__title {
+  .main .winMessage .winMessage__title {
     padding-left: 30px;
     font-size: 70px;
   }
-  .main .winMessage__active .winMessage__image {
+  .main .winMessage .winMessage__image {
     width: 60%;
   }
   .main .click-to-continue {
@@ -111,11 +111,11 @@
   .main .main__card-front {
     border-radius: 10px;
   }
-  .main .winMessage__active .winMessage__title {
+  .main .winMessage .winMessage__title {
     padding-left: 30px;
     font-size: 70px;
   }
-  .main .winMessage__active .winMessage__image {
+  .main .winMessage .winMessage__image {
     width: 60%;
   }
   .main .click-to-continue {

@@ -24,6 +24,9 @@
   border-radius: 25px;
   -webkit-animation: main-cards 2.3s infinite linear;
           animation: main-cards 2.3s infinite linear;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .main__card {
   position: relative;

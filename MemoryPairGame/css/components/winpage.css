@@ -10,6 +10,27 @@
   opacity: 0;
   visibility: hidden;
   transition: 0.3s ease-in-out all;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.winMessage .winMessage__image {
+  max-width: 100%;
+  -webkit-animation: 10s linear infinite img;
+          animation: 10s linear infinite img;
+}
+.winMessage .winMessage__title {
+  padding-left: 50px;
+  z-index: 1;
+  position: absolute;
+  color: rgb(252, 252, 252);
+  text-shadow: 3px 3px 5px black;
+  font-size: 100px;
+  font-weight: bold;
+  font-family: gagalin;
+  letter-spacing: 5px;
+  -webkit-animation: 2s linear infinite title;
+          animation: 2s linear infinite title;
 }
 
 .click-to-continue {
@@ -38,26 +59,7 @@
 }
 
 .winMessage__active {
-  overflow: hidden;
-  opacity: 1;
   visibility: visible;
-  transition: 0.3s ease-in-out all;
-}
-.winMessage__active .winMessage__image {
-  max-width: 100%;
-  -webkit-animation: 10s linear infinite img;
-          animation: 10s linear infinite img;
-}
-.winMessage__active .winMessage__title {
-  padding-left: 50px;
-  z-index: 1;
-  position: absolute;
-  color: rgb(252, 252, 252);
-  text-shadow: 3px 3px 5px black;
-  font-size: 100px;
-  font-weight: bold;
-  font-family: gagalin;
-  letter-spacing: 5px;
-  -webkit-animation: 2s linear infinite title;
-          animation: 2s linear infinite title;
+  opacity: 1;
+  overflow: hidden;
 }

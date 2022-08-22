@@ -34,6 +34,9 @@ body {
   border-radius: 25px;
   -webkit-animation: main-cards 2.3s infinite linear;
           animation: main-cards 2.3s infinite linear;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .main__card {
   position: relative;
@@ -94,6 +97,27 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: 0.3s ease-in-out all;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.winMessage .winMessage__image {
+  max-width: 100%;
+  -webkit-animation: 10s linear infinite img;
+          animation: 10s linear infinite img;
+}
+.winMessage .winMessage__title {
+  padding-left: 50px;
+  z-index: 1;
+  position: absolute;
+  color: rgb(252, 252, 252);
+  text-shadow: 3px 3px 5px black;
+  font-size: 100px;
+  font-weight: bold;
+  font-family: gagalin;
+  letter-spacing: 5px;
+  -webkit-animation: 2s linear infinite title;
+          animation: 2s linear infinite title;
 }
 
 .click-to-continue {
@@ -122,28 +146,9 @@ body {
 }
 
 .winMessage__active {
-  overflow: hidden;
-  opacity: 1;
   visibility: visible;
-  transition: 0.3s ease-in-out all;
-}
-.winMessage__active .winMessage__image {
-  max-width: 100%;
-  -webkit-animation: 10s linear infinite img;
-          animation: 10s linear infinite img;
-}
-.winMessage__active .winMessage__title {
-  padding-left: 50px;
-  z-index: 1;
-  position: absolute;
-  color: rgb(252, 252, 252);
-  text-shadow: 3px 3px 5px black;
-  font-size: 100px;
-  font-weight: bold;
-  font-family: gagalin;
-  letter-spacing: 5px;
-  -webkit-animation: 2s linear infinite title;
-          animation: 2s linear infinite title;
+  opacity: 1;
+  overflow: hidden;
 }
 
 @-webkit-keyframes img {
@@ -265,6 +270,15 @@ body {
     height: 90%;
   }
 }
+@media (max-width: 1500px) and (max-height: 900px) {
+  .main .main__cards {
+    padding: 30px;
+    grid-template-rows: repeat(4, 1fr);
+    height: 90%;
+    gap: 30px;
+    width: 600px;
+  }
+}
 @media (max-width: 800px) {
   .main {
     position: static;
@@ -283,11 +297,11 @@ body {
     filter: drop-shadow(0px 0px 10px rgb(20, 0, 0));
     transform: scale(1);
   }
-  .main .winMessage__active .winMessage__title {
+  .main .winMessage .winMessage__title {
     padding-left: 0px;
     font-size: 32px;
   }
-  .main .winMessage__active .winMessage__image {
+  .main .winMessage .winMessage__image {
     width: 80%;
   }
   .main .click-to-continue:hover {
@@ -334,11 +348,11 @@ body {
   .main .main__card-front {
     border-radius: 10px;
   }
-  .main .winMessage__active .winMessage__title {
+  .main .winMessage .winMessage__title {
     padding-left: 30px;
     font-size: 70px;
   }
-  .main .winMessage__active .winMessage__image {
+  .main .winMessage .winMessage__image {
     width: 60%;
   }
   .main .click-to-continue {
@@ -361,11 +375,11 @@ body {
   .main .main__card-front {
     border-radius: 10px;
   }
-  .main .winMessage__active .winMessage__title {
+  .main .winMessage .winMessage__title {
     padding-left: 30px;
     font-size: 70px;
   }
-  .main .winMessage__active .winMessage__image {
+  .main .winMessage .winMessage__image {
     width: 60%;
   }
   .main .click-to-continue {
