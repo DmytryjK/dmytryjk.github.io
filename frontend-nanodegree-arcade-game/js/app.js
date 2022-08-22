@@ -115,7 +115,7 @@ const allEnemies = [];
 
 createEnemies(3, 2);
 createEnemies(2, 1);
-createEnemies(4, 3);
+createEnemies(1, 3);
 
 function createEnemies(n = 1, row = 1) {
     const rowNumber = baseConfig.numberOfFields[row];
