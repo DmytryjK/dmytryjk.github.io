@@ -192,7 +192,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function filterCards() {
-    const requestURL = 'https://randomuser.me/api/?nat=us,ca,fr,ua,no,fi,nz&results=20&inc=name,gender,location,picture,dob,phone,nat,registered,phone,email&noinfo';
+    const requestURL = 'https://randomuser.me/api/?nat=us,ca,fr,ua,no,fi,nz&results=50&inc=name,gender,location,picture,dob,phone,nat,registered,phone,email&noinfo';
 
     let slider;
     let sortedCards = [];
