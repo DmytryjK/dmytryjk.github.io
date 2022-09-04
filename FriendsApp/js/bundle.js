@@ -192,7 +192,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function filterCards() {
-    const requestURL = 'https://randomuser.me/api/?nat=us,ca,fr,ua,no,fi,nz&results=50&inc=name,gender,location,picture,dob,phone,nat,registered,phone,email&noinfo';
+    const requestURL = 'https://randomuser.me/api/?nat=us,ca,fr,ua,no,fi,nz&results=20&inc=name,gender,location,picture,dob,phone,nat,registered,phone,email&noinfo';
 
     let slider;
     let sortedCards = [];
@@ -230,6 +230,7 @@ function filterCards() {
     
         sortParent.addEventListener('change', event => {
             const target = event.target;
+
             if (target.name === 'sort') {   
                 sortedCards = sortByAgeAndName(target.value, sortedCards);
                 (0,_cardsRender__WEBPACK_IMPORTED_MODULE_1__["default"])(sortedCards);
@@ -241,12 +242,15 @@ function filterCards() {
             sortedCards = filterSearchByName(sortedCards, searchInputValue.value);
             sortedCards = filterBySliderAge(sortedCards);
             isEventSearchFilterIsDone = true;
+
             if (dataFilterSexActiveValue === 'male' || dataFilterSexActiveValue === 'female') {
                 sortedCards = filterBySex(sortedCards, dataFilterSexActiveValue);
             }
+
             if (searchInputValue.value === '') {
                 isEventSearchFilterIsDone = false;
                 sortedCards = filterBySliderAge(sortedCards);
+
                 if (dataFilterSexActiveValue === 'male' || dataFilterSexActiveValue === 'female') { 
                     sortedCards = filterBySex(sortedCards, dataFilterSexActiveValue);
                 } 
@@ -284,6 +288,7 @@ function filterCards() {
                         dataFilterSexActiveValue = '';
                         break;
                 }
+
                 (0,_cardsRender__WEBPACK_IMPORTED_MODULE_1__["default"])(sortedCards);
             }  
         });
@@ -292,9 +297,11 @@ function filterCards() {
             sortedCards = filterBySliderAge(cards);
             sortedCards = sortByAgeAndName(sortFilter.value, sortedCards);
             sortedCards = filterSearchByName(sortedCards, searchInputValue.value);
+
             if (dataFilterSexActiveValue === 'male' || dataFilterSexActiveValue === 'female') {
                 sortedCards = filterBySex(sortedCards, dataFilterSexActiveValue);
             } 
+
             (0,_cardsRender__WEBPACK_IMPORTED_MODULE_1__["default"])(sortedCards);
         });
 
@@ -317,25 +324,26 @@ function filterCards() {
         switch(checkedValueForSort) {
             case 'A-Z':
                 cardsForSort = cardsForSort.sort(function (a,b) {
-                    if (a['name']['first'] < b['name']['first']) return -1;
+                    return a['name']['first'] < b['name']['first'] ? -1 : 1;
                 })
                 break;
             case 'Z-A':
                 cardsForSort = cardsForSort.sort(function (a,b) {
-                    if (a['name']['first'] > b['name']['first']) return -1;
+                    return a['name']['first'] > b['name']['first'] ? -1 : 1;
                 })
                 break;
             case '1-99':
                 cardsForSort = cardsForSort.sort(function (a,b) {
-                    if (a['dob']['age'] < b['dob']['age']) return -1;
+                    return a['dob']['age'] < b['dob']['age'] ? -1 : 1;
                 })
                 break;
             case '99-1':
                 cardsForSort = cardsForSort.sort(function (a,b) {
-                    if (a['dob']['age'] > b['dob']['age']) return -1;
+                    return a['dob']['age'] > b['dob']['age'] ? -1 : 1;
                 })
                 break;
         }
+
         return cardsForSort;
     }
 
@@ -367,14 +375,16 @@ function filterCards() {
         let result = 0;
         let checkArr = [];
         cards.forEach(item => checkArr.push(item['dob']['age']));
+
         switch(value) {
             case 'min':
-            result = Math.min.apply(null, checkArr);
+                result = Math.min.apply(null, checkArr);
             break;
             case 'max' :
                 result = Math.max.apply(null, checkArr);
             break;
         }
+
         return result;
     }
 
