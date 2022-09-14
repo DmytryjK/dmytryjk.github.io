@@ -169,10 +169,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "getPeopleInfo": () => (/* binding */ getPeopleInfo)
 /* harmony export */ });
-let getPeopleInfo = async (url) => {
-    const res = await fetch(url);
-    return await res.json();
-}
+const preloader = document.querySelector('.preloader');
+
+const getPeopleInfo = async (url) => {
+    try {
+        preloader.classList.add('preloader_active');
+        const res = await fetch(url);
+
+        await preloader.classList.remove('preloader_active');
+        return await res.json();
+    } catch (error) {
+        return await getPeopleInfo(url);
+    }
+};
 
 
 
@@ -228,8 +237,7 @@ function filterCards() {
             slider = (0,_rangeSlider__WEBPACK_IMPORTED_MODULE_2__["default"])(minMaxNumber(fetchCardsCopy, 'min'), minMaxNumber(fetchCardsCopy, 'max'));
 
             filters(fetchCardsCopy);
-        })
-        .catch(err => console.log(err));
+        });
 
     function filters(cards) {
         let isEventSearchFilterIsDone = false;
