@@ -75,6 +75,11 @@ body {
   transform: rotateY(0deg) perspective(600px) translate(0%, 0%);
   transition: 0.5s ease all;
 }
+.main .active-card {
+  pointer-events: none;
+  opacity: 1;
+  visibility: visible;
+}
 .main .active-card .main__card-front {
   transform: rotateY(0deg) perspective(600px) translate(0%, 0%);
   transition: 0.5s ease all;
@@ -83,6 +88,10 @@ body {
 .main .active-card .main__card-back {
   transform: rotateY(-180deg) perspective(600px) translate(0%, 0%);
   transition: 0.5s ease all;
+}
+.main .hide-card {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .timer {
