@@ -40,7 +40,7 @@ let doubleElementsOfCards = [];
 
 let parrentCardBlock = document.createElement('ul');
 parrentCardBlock.classList.add('main__cards');
-
+console.log('test');
 createElementsOfCards();
 
 let currentListCards = document.querySelectorAll('.main__card');
@@ -64,8 +64,6 @@ if (localStorage.getItem('bestTime') !== null) {
   bestTime.innerText = localStorage.getItem('bestTime');
   bestResultsSheet.push(bestTime.innerText);
 }
-
-parrentCardBlock.addEventListener('click', onClickUserActions, false);
 
 function onClickUserActions(e) {
   const clickedTarget = e.target.parentNode;
@@ -169,7 +167,7 @@ function createElementsOfCards() {
   }
 
   mainCardsBlock.append(parrentCardBlock);
-
+  parrentCardBlock.addEventListener('click', onClickUserActions, false);
 }
 
 function resetTimer() {
