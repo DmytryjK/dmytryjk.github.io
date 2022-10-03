@@ -40,7 +40,7 @@ let doubleElementsOfCards = [];
 
 let parrentCardBlock = document.createElement('ul');
 parrentCardBlock.classList.add('main__cards');
-console.log('test');
+
 createElementsOfCards();
 
 let currentListCards = document.querySelectorAll('.main__card');
