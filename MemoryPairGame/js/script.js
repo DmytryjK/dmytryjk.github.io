@@ -45,7 +45,8 @@ createElementsOfCards();
 
 let currentListCards = document.querySelectorAll('.main__card');
 let activeCards = [],
-  numbersOfCloseCards = 0;
+  numbersOfHideCards = 0,
+  timeoutActiveCards = null;
 
 const currentTime = document.querySelector('.timer-current span'),
   bestTime = document.querySelector('.timer-best span');
@@ -77,44 +78,18 @@ function onClickUserActions(e) {
 
     if (activeCards[0].getAttribute(["data-name"]) === activeCards[1].getAttribute(["data-name"]) &&
       activeCards[0].getAttribute(["data-numbers"]) !== activeCards[1].getAttribute(["data-numbers"])) {
-      setTimeout(hideActiveCards, 600, activeCards);
+        setTimeout(hideActiveCards, 600, activeCards);
     } else {
       setTimeout(closeActiveCards, 800, activeCards);
     }
 
-    if (numbersOfCloseCards === doubleElementsOfCards.length / 2 - 1) {
-
-      winnerPopup.classList.add('winMessage__active');
-
-      localStorage.setItem('time', currentTime.innerText);
-      currentTime.innerText = localStorage.getItem('time');
-      bestResultsSheet.push(localStorage.getItem('time'));
-
-      if (bestResultsSheet.length > 1) {
-
-        bestTime.innerText = bestResultsSheet.reduce((prevItem, currentItem) => {
-          if (currentItem < prevItem) {
-            return currentItem;
-          } else {
-            return prevItem;
-          }
-        });
-
-      } else {
-        bestTime.innerText = localStorage.getItem('time');
-      }
-
-      localStorage.setItem('bestTime', bestTime.innerText);
-      clearInterval(timerInterval);
-
-      buttonToContinue.addEventListener('click', clickToContinue, false);
-    }
     activeCards = [];
   }
 }
 
-function clickToContinue(buttonToContinue) {
-  resetVariables(buttonToContinue);
+function restartGame() {
+  resetVariables();
+  resetListeners();
   createElementsOfCards();
   currentListCards = document.querySelectorAll('.main__card');
   resetTimer();
@@ -126,15 +101,14 @@ function hideActiveCards(activeCards) {
   activeCards.forEach(activeCard => {
     activeCard.classList.add('hide-card');
   });
-
-  numbersOfCloseCards++;
+  numbersOfHideCards++;
+  checkOnVictory();
 }
 
 function closeActiveCards(activeCards) {
   activeCards.forEach(activeCard => {
     activeCard.classList.remove('active-card');
   });
-
   activeCards = [];
 }
 
@@ -198,7 +172,41 @@ function timer() {
 function resetVariables() {
   winnerPopup.classList.remove('winMessage__active');
   parrentCardBlock.innerHTML = "";
-  numbersOfCloseCards = 0;
+  numbersOfHideCards = 0;
+}
+
+function resetListeners() {
   parrentCardBlock.removeEventListener('click', onClickUserActions, false);
-  buttonToContinue.removeEventListener('click', clickToContinue, false);
+  buttonToContinue.removeEventListener('click', restartGame, false);
+}
+
+function checkOnVictory() {
+  if (numbersOfHideCards >= doubleElementsOfCards.length / 2) {
+    winnerPopup.classList.add('winMessage__active');
+    setTimeToStorage();
+    buttonToContinue.addEventListener('click', restartGame, false);
+  }
+}
+
+function setTimeToStorage() {
+  localStorage.setItem('time', currentTime.innerText);
+  currentTime.innerText = localStorage.getItem('time');
+  bestResultsSheet.push(localStorage.getItem('time'));
+
+  if (bestResultsSheet.length > 1) {
+
+    bestTime.innerText = bestResultsSheet.reduce((prevItem, currentItem) => {
+      if (currentItem < prevItem) {
+        return currentItem;
+      } else {
+        return prevItem;
+      }
+    });
+
+  } else {
+    bestTime.innerText = localStorage.getItem('time');
+  }
+
+  localStorage.setItem('bestTime', bestTime.innerText);
+  clearInterval(timerInterval);
 }
