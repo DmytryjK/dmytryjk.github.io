@@ -410,20 +410,21 @@ body {
     font-size: 14px;
   }
 }
-@media (max-width: 900px) and (orientation: landscape) {
+@media (max-width: 900px) and (max-height: 550px) {
   .main {
     padding: 5px;
     align-items: flex-start;
   }
   .main .main__cards-block {
-    padding-top: 30px;
-    height: 80vh;
+    padding-top: 40px;
+    height: 90vh;
     width: 80%;
     justify-content: center;
   }
   .main .main__cards {
     border-radius: 10px;
-    width: 35%;
+    width: 45%;
+    height: 100%;
     gap: 10px;
     padding: 10px;
   }
