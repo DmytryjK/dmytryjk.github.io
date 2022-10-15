@@ -93,6 +93,9 @@ body {
   opacity: 0;
   visibility: hidden;
 }
+.main .pointer-events {
+  pointer-events: none;
+}
 
 .timer {
   padding: 15px;
